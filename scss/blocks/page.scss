@@ -1,0 +1,53 @@
+.page{
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: $primary-back-color;
+    color: $primary-font-color;
+    font-family: $font-family;
+    &_dark-theme{
+        @include theme-dark;
+    }
+    &__title{
+        @include fonts(700,55px,60px,-0.5px);
+        margin: 0;
+        margin-bottom: 50px;
+
+        @media screen and (max-width:$width-media-large){
+            @include fonts(0,45px,50px,0);
+        }
+        @media screen and (max-width:$width-media-middle){
+            margin-bottom: 20px;
+
+            @include fonts(0,37px,42px,0);
+        }
+        &_place{
+            &_header{
+
+                grid-column: 1/2;
+                margin-top:63px;
+                margin-bottom: 22px;
+                max-width:330px;
+            }
+            &_bikes{
+                margin-bottom: 0;
+            }
+            &_workout{
+                @media screen and (max-width:$width-media-large){
+                    margin-bottom: 30px;
+                }
+                @media screen and (max-width:780px){
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+    }
+    &__main-content{
+        margin: 120px 0;
+
+        @media screen and (max-width:$width-media-large){
+            margin-top: 80px;
+        }     
+    }
+    
+}

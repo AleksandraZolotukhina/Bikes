@@ -1,0 +1,31 @@
+@mixin fonts($weight, $size, $l-height,$space) {
+    font-style: normal;
+    @if $weight!=0{
+        font-weight: $weight;
+    }
+    @if $size!=0{
+        font-size: $size;;
+    }
+    @if $l-height!=0{
+        line-height: $l-height;
+    }
+    @if $space!=0{
+        letter-spacing:$space;
+    }
+}
+@mixin theme-dark{
+    background-color: $primary-back-color-dark;
+    color: $primary-font-color-dark;
+    .header{
+        &__main-link{
+            color:$primary-font-color-dark;
+            &:hover{
+                opacity: 0.65;
+            } 
+        }
+        &__subtitle{
+            color: $accent-font-color-dark;
+        }
+    }
+
+}

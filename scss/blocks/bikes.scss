@@ -1,0 +1,101 @@
+.bikes{
+    &__place{
+        display: none;
+
+        border: 1px solid #E3E3E3;
+        border-radius: 2px;
+        padding: 8px 12px;
+
+        @include fonts(600,11px,14px,0);
+        color:$primary-font-color;
+        background-color: $primary-back-color;
+    }
+    &__header{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__lists{
+        display: flex;
+        align-items: flex-end;
+
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    &__item{
+        margin-right: 40px;
+
+        @include fonts(400,18px,28px,0);
+
+        cursor: pointer;
+        color: $accent-font-color;
+        opacity: 0.7;
+
+        @media screen and (max-width:$width-media-middle){
+            @include fonts(0,16px,28px,0);
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+        &:hover{
+            opacity: 0.6;
+        }
+        &_active{
+            color: $primary-font-color;
+            opacity: 1;
+            &:hover{
+                opacity: 0.75;
+            }
+        }
+    }
+    &__cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+        gap: 30px;
+
+        list-style-type: none;
+        margin: 0;
+        margin-top: 120px;
+        padding: 0;
+
+        @media screen and (max-width:$width-media-large){
+            margin-top: 80px;
+        }
+        @media screen and (max-width:$width-media-middle){
+            margin-top: 40px;
+        }
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+    }
+    &__link{
+        box-shadow: -20px 60px 220px rgb(0 0 0 / 21%);
+        border-radius: 20px;
+        background-color: $primary-back-color;
+
+        cursor: pointer; 
+        padding: 20px;
+
+        @media screen and (max-width:$width-media-middle){
+            padding: 15px;
+        }
+    }
+    &__picture{
+        width: 100%;
+        object-fit: contain;
+    }
+    &__name{
+        margin: 0;
+        margin-top: 22px;
+        @include fonts(600,18px,22px,0); 
+
+        @media screen and (max-width:$width-media-large){
+            @include fonts(0,16px,0,0); 
+        }
+        @media screen and (max-width:$width-media-middle){
+            @include fonts(0,14px,0,0); 
+        }
+    }
+
+}

@@ -1,0 +1,59 @@
+.road__pictures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  gap: 40px;
+  margin-top: 80px;
+}
+.road__picture {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.road__picture-content_mark {
+  position: relative;
+}
+.road__picture-content_mark::before {
+  width: 51px;
+  height: 16px;
+  content: url("../images/Vector.png");
+  position: absolute;
+  bottom: 28px;
+  left: 16px;
+  z-index: 2;
+}
+.road__picture-content_mark::after {
+  width: 100px;
+  height: 40px;
+  content: url("../images/Rectangle.png");
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 16px;
+}
+.road__buttons {
+  margin-top: 50px;
+}
+.road__button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 0;
+  padding: 0;
+  background-color: #EBEBEB;
+}
+.road__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.road__button::before {
+  width: 7px;
+  height: 16px;
+  content: url("../images/Arrow_next.png");
+}
+.road__button_type_back {
+  margin-right: 20px;
+}
+.road__button_type_back::before {
+  content: url("../images/Arrow_back.png");
+}/*# sourceMappingURL=road.css.map */
