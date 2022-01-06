@@ -13,19 +13,3 @@
         letter-spacing:$space;
     }
 }
-@mixin theme-dark{
-    background-color: $primary-back-color-dark;
-    color: $primary-font-color-dark;
-    .header{
-        &__main-link{
-            color:$primary-font-color-dark;
-            &:hover{
-                opacity: 0.65;
-            } 
-        }
-        &__subtitle{
-            color: $accent-font-color-dark;
-        }
-    }
-
-}

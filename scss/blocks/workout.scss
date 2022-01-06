@@ -7,7 +7,7 @@
     @media screen and (max-width:$width-media-large){
         column-gap: 26px;
     }
-    @media screen and (max-width:$width-media-large){
+    @media screen and (max-width:$width-media-middle){
         grid-template-columns: minmax(200px, 300px) minmax(450px,1fr);
     }
     @media screen and (max-width:780px){

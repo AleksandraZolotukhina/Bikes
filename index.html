@@ -10,115 +10,126 @@
 
 <body class="page">
     <header class="page__header header">
+        <div class="header__popup popup">
+            <button class="popup__button popup__button_el_close" type="button"></button>
+            <nav class="header__main-nav popup__links">
+                <a class="header__main-link popup__link name" href="#coverings">Покрытия и градиенты</a>
+                <a class="header__main-link popup__link name" href="#bike">Велосипеды</a>
+                <a class="header__main-link popup__link name" href="#workout">Тренировки</a>
+            </nav>
+            <div class="page__switcher page__switcher_place_header switch">
+                <img class="switch__picture switch__picture_type_sun" src="./images/sun_light.svg" alt="">
+                <input class="switch__checkbox" type="checkbox">
+                <img class="switch__picture switch__picture_type_moon" src="./images/moon_light.svg" alt="">
+            </div>
+        </div>
         <nav class="header__main-nav">
-            <a class="header__main-link" href="#coverings">Покрытия и градиенты</a>
-            <a class="header__main-link" href="#bike">Велосипеды</a>
-            <a class="header__main-link" href="#workout">Тренировки</a> <!-- анимация при наведении мыши-->
+            <a class="header__main-link name" href="#coverings">Покрытия и градиенты</a>
+            <a class="header__main-link name" href="#bike">Велосипеды</a>
+            <a class="header__main-link name" href="#workout">Тренировки</a> <!-- анимация при наведении мыши-->
         </nav>
+        <div class="header__burger">
+        </div>
         <div class="header__content">
-            <h1 class="page__title page__title_place_header">Шоссе, ТТ и Грэвел</h1>
-            <p class="header__subtitle">Триатлонные старты, горные серпантины или грейвел заезды по живописным
+            <h1 class="page__title page__title_place_header title">Шоссе, ТТ и Грэвел</h1>
+            <p class="header__subtitle text">Триатлонные старты, горные серпантины или грейвел заезды по живописным
                 маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
             <button class="header__button">Подробнее</button>
-            <p class="header__text">Cannondale Systemsix</p>
+            <p class="header__text name">Cannondale Systemsix</p>
             <img class="header__picture" src="./images/Manuel_will.png" alt="">
             <img class="header__bike" src="./images/Cannondale_Systemsix_Himod.png" alt="">
         </div>
-
     </header>
     <main class="page__main-content main-content">
-        <section class="quote">
+        <section class="main-content__quote quote">
             <img class="quote__picture" src="./images/Lubo_minar.png" alt="">
             <blockquote class="quote__text-container">
-                <h2 class="quote__title">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</h2>
-                <p class="quote__text"><cite class="quote__author">Эдди Меркс</cite>Велогонщик</p><!-- Исправить! -->
+                <h2 class="quote__title title">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</h2>
+                <div class="quote__text">
+                    <cite class="quote__author name">Эдди Меркс</cite>
+                    <p class="quote__work text">Велогонщик</p>
+                </div>
             </blockquote>
         </section>
         <section class="main-content__road road" id="coverings">
-            <h2 class="page__title page__title_place_road">Шоссе</h2>
-            <p class="main-content__text main-content__text_place_road ">На шоссейном велосипеде можно ездить по
-                асфальту на разных градиентах: будь то
-                горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
-            <div class="road__pictures">
-                <div class="road__picture-content road__picture-content_mark">
-                    <img class="road__picture" src="./images/Highway.png" alt="">
+            <template class="road__template">
+                <h2 class="page__title page__title_place_road title"></h2>
+                <p class="main-content__text main-content__text_place_road text"></p>
+                <div class="road__pictures">
+                    <div class="road__picture-content road__picture-content_mark">
+                        <img class="road__picture">
+                    </div>
+                    <div class="road__picture-content">
+                        <img class="road__picture">
+                    </div>
                 </div>
-                <div class="road__picture-content">
-                    <img class="road__picture" src="./images/Gravel.png" alt="">
-                </div>
-            </div>
+            </template>
             <div class="road__buttons">
-                <button class="road__button road__button_type_back"></button>
-                <button class="road__button road__button_type_next"></button>
+                <button class="road__button road__button_type_back arrow"></button>
+                <button class="road__button road__button_type_next arrow"></button>
             </div>
         </section>
         <section class="main-content__bikes bikes" id="bike">
             <div class="bikes__header">
-                <h2 class="page__title page__title_place_bikes">Велосипеды</h2>
+                <h2 class="page__title page__title_place_bikes title">Велосипеды</h2>
                 <ul class="bikes__lists">
-                    <li class="bikes__item bikes__item_active">Шоссе</li>
-                    <li class="bikes__item">Грэвел</li>
-                    <li class="bikes__item">TT</li>
+                    <li class="bikes__item bikes__item_active text">Шоссе</li>
+                    <li class="bikes__item text">Грэвел</li>
+                    <li class="bikes__item text">TT</li>
                 </ul>
                 <select class="bikes__place" name="bikes-place" id="bikes-place">
-                    <option class="bikes__element" value="highway">Шоссе</option>
-                    <option class="bikes__element" value="gravel">Грэвел</option>
-                    <option class="bikes__element" value="tt">TT</option>
+                    <option class="bikes__element text" value="highway">Шоссе</option>
+                    <option class="bikes__element text" value="gravel">Грэвел</option>
+                    <option class="bikes__element text" value="tt">TT</option>
                 </select>
             </div>
             <ul class="bikes__cards">
-                <li class="bikes__card">
-                    <a class="bikes__link"
-                        href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN">
-                        <img class="bikes__picture" src="./images/Cervelo_Caledonia_5.png" alt="">
-                    </a>
-                    <p class="bikes__name">Cervelo Caledonia-5</p>
-                </li>
-                <li class="bikes__card">
-                    <a class="bikes__link"
-                        href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J">
-                        <img class="bikes__picture" src="./images/Cannondale_Systemsix_Himod.png" alt="">
-                    </a>
-                    <p class="bikes__name">Cannondale Systemsix Himod</p>
-                </li>
-                <li class="bikes__card">
-                    <a class="bikes__link"
-                        href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF">
-                        <img class="bikes__picture" src="./images/Trek_Domane_SL-7.png" alt="">
-                    </a>
-                    <p class="bikes__name">Trek Domane SL-7</p>
-                </li>
+                <template class="bikes__template">
+                    <li class="bikes__card">
+                        <a class="bikes__link">
+                            <img class="bikes__picture">
+                        </a>
+                        <p class="bikes__name name"></p>
+                    </li>
+                </template>
+            </ul>
+            <ul class="bikes__points">
+                <template class="bikes__template-points">
+                    <li class="bikes__point"></li>
+                </template>
             </ul>
         </section>
         <section class="main-content__workout workout" id="workout">
-            <h2 class="page__title page__title_place_workout">Тренировки</h2>
-            <p class="main-content__text ">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot,
+            <h2 class="page__title page__title_place_workout title">Тренировки</h2>
+            <p class="main-content__text text">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot,
                 а записать эти тренировки поможет приложение Strava, а также это приложение позволит построить
                 тренировочный план.</p>
             <ul class="workout__applications">
-                <li class="workout__application"><a class="workout__application-link"
+                <li class="workout__application"><a class="workout__application-link name"
                         href="https://www.strava.com">Strava</a></li>
-                <li class="workout__application"><a class="workout__application-link"
+                <li class="workout__application"><a class="workout__application-link name"
                         href="https://www.komoot.com">Komoot</a></li>
             </ul>
             <img class="workout__picture" src="./images/Place_training.png" alt="">
         </section>
     </main>
     <footer class="page__footer footer">
-        <h3 class="footer__title">Подпишитесь на рассылку —</h3>
+        <h3 class="footer__title title">Подпишитесь на рассылку —</h3>
         <div class="footer__email-container">
-            <input class="footer__email" type="email" placeholder="Ваш e-mail">
-             <button class="footer__button">ok</button>
+            <input class="footer__email email" type="email" placeholder="Ваш e-mail">
+            <button class="footer__button button">ok</button>
         </div>
         <div class="footer__container">
-            <p class="footer__copyright">© Road Club 2021</p>
-            <div class="footer__switcher">
-                <img class="footer__picture footer__picture_type_sun" src="./images/sun_light.svg" alt="">
-                <input class="footer__checkbox" type="checkbox">
-                <img class="footer__picture footer__picture_type_moon" src="./images/moon_light.svg" alt=""> 
+            <p class="footer__copyright text">© Road Club 2021</p>
+            <div class="page__switcher page__switcher_place_footer switch">
+                <img class="switch__picture switch__picture_type_sun" src="./images/sun_light.svg" alt="">
+                <input class="switch__checkbox" type="checkbox">
+                <img class="switch__picture switch__picture_type_moon" src="./images/moon_light.svg" alt="">
             </div>
+            <img class="footer__logo" src="./images/logo.svg" alt="">
         </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 
 </html>

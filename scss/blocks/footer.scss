@@ -1,26 +1,48 @@
 .footer{
     max-width: $width-large;
     margin: 0 auto;
-    padding: 74px 120px;
-    padding-bottom: 60px;
 
     background-color: $accent-back-color;
 
     @media screen and (max-width:$width-media-large){
         max-width: 100%;
-        padding: 50px;
     } 
+    &_dark-theme{
+        background-color: $accent-back-color-dark;
+    }
     &__title{
         max-width: 230px;
         margin: 0;
         margin-bottom: 48px;
         @include fonts(600,24px,32px,0);
+
+        @media screen and (max-width:$width-media-small){
+            margin-bottom: 40px;
+        }
     }
     &__email-container{
         position: relative;
     }
     &__button{
         display: none;
+        
+        position: absolute;
+        top: 22%;
+        left: 322px;
+
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+        color: $primary-font-color;
+        background-color: initial;
+        @include fonts(500,13px,28px,0);
+
+        &:disabled{
+            cursor: not-allowed;
+        }
+        @media screen and (max-width:$width-media-small){
+            left: 250px;
+        }
     }
     &__email{
         width: 360px;
@@ -36,21 +58,11 @@
         opacity: 0.7;
         @include fonts(500,13px,28px,0);
 
+        @media screen and (max-width:$width-media-small){
+            width: 284px;
+        }
         &:focus{
             outline-color: #C7C7C7;
-            ~.footer__button{
-                display: block;
-
-                position: absolute;
-                top: 22%;
-                left: 322px;
-
-                cursor: pointer;
-                border: 0;
-                padding: 0;
-                color: $primary-font-color;
-                @include fonts(500,13px,28px,0);
-            }
         }
         &:hover{
             color: $primary-font-color;
@@ -61,6 +73,7 @@
     &__container{
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         margin-top: 100px;
     }
@@ -70,54 +83,14 @@
         @include fonts(600,14px,20px,0);
         color: #CFCFCF; 
     }
-    &__switcher{
-        display: flex;
-        align-items: center;
-    }
-    &__checkbox{
-        width: 44px;
-        height: 24px;
+    &__logo{
+        display: none;
 
-        position: relative;
-        
-        margin: 0;
-        margin-right: 22px;
+        width: 38px;
+        height: 38px;
 
-        appearance: none;
-        background-color: #FFFFFF;
-        border-radius: 9999px;
-        &:checked{
-            background-color: #545454;
-        }
-        &::before{
-            width: 20px;
-            height: 20px;
-
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            content: "";
-            background-color: #24B47E;
-            box-shadow: 0px 0px 0px #FFFFFF;
-            border-radius: 9999px;
-        }
-        &:checked::before{
-            left: auto;
-            right: 2px;
-        }
-    }
-    &__picture{
-        &_type{
-            &_sun{
-                width:28px;
-                height: 28px;
-
-                margin-right: 22px;
-            }
-            &_moon{
-                width: 19.35px;
-                height: 19.35px;
-            }
+        @media screen and (max-width:$width-media-small){
+            display: block;
         }
     }
 }

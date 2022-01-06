@@ -8,11 +8,18 @@
     @media screen and (max-width:$width-media-middle){
         max-width: $width-small;
     }
+    @media screen and (max-width:$width-media-small){
+        display: grid;
+        row-gap: 40px;
+    }
 
     &__picture{
         max-width: 54.1%;
         @media screen and (max-width:$width-media-large){
             max-width: 58%;
+        }
+        @media screen and (max-width:$width-media-small){
+            max-width: 100%;
         }
     }
     &__text-container{
@@ -23,6 +30,9 @@
         flex-direction: column;
         justify-content: space-between;
         
+        @media screen and (max-width:$width-media-small){
+            max-width: 100%;
+        }
     }
     &__title{
         margin: 0;
@@ -34,28 +44,41 @@
         @media screen and (max-width:$width-media-middle){
             @include fonts(0,20px,0,0);
         }
+        @media screen and (max-width:$width-media-small){
+            margin-bottom: 40px;
+            @include fonts(0,23px,29px,-0.5px);
+        }
     }
     &__text{
-        margin: 0;
         display: flex;
         flex-direction: column;
-
-        @include fonts(400,16px,28px,0);
-        color: $accent-font-color;
-        opacity: 0.7;
-
-        @media screen and (max-width:$width-media-middle){
-            @include fonts(0,13px,0,0);
-        }  
     }
     &__author{
         margin-bottom: 5px;
 
         @include fonts(500,20px,32px,0);
-        color: rgba(21, 21, 21, 1);
+        color: $primary-font-color;
     
         @media screen and (max-width:$width-media-middle){
             @include fonts(0,16px,0,0);
+        }
+        @media screen and (max-width:$width-media-small){
+            @include fonts(0,14px,22px,0);
         }    
+    }
+    &__work{
+        color: $accent-font-color;
+        opacity: 0.7;
+
+        margin: 0;
+        
+        @include fonts(400,16px,28px,0);
+
+        @media screen and (max-width:$width-media-middle){
+            @include fonts(0,13px,0,0);
+        } 
+        @media screen and (max-width:$width-media-small){
+            @include fonts(0,10px,16px,0);
+        } 
     }
 }

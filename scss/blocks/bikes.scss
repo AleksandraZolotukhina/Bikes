@@ -9,10 +9,18 @@
         @include fonts(600,11px,14px,0);
         color:$primary-font-color;
         background-color: $primary-back-color;
+        @media screen and (max-width:$width-media-small){
+            display: block;
+            margin-top: 40px;
+        }
     }
     &__header{
         display: flex;
         justify-content: space-between;
+
+        @media screen and (max-width:$width-media-small){
+            display: block;
+        }
     }
     &__lists{
         display: flex;
@@ -21,6 +29,10 @@
         margin: 0;
         padding: 0;
         list-style-type: none;
+
+        @media screen and (max-width:$width-media-small){
+            display: none;
+        }
     }
     &__item{
         margin-right: 40px;
@@ -50,7 +62,7 @@
     }
     &__cards{
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+        grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
         gap: 30px;
 
         list-style-type: none;
@@ -64,10 +76,27 @@
         @media screen and (max-width:$width-media-middle){
             margin-top: 40px;
         }
+        @media screen and (max-width:$width-media-small){
+            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 360px));
+            justify-content: center;
+        }
     }
     &__card{
         display: flex;
         flex-direction: column;
+
+        @media screen and (max-width:$width-media-small){
+            display: none;
+            background-color: #F4F4F4;
+            border-radius: 20px;
+            box-shadow: -20px 60px 220px rgb(0 0 0 / 21%);
+
+            padding: 16px 14.95px;
+        }
+        &_visible{
+            display: flex;
+        }
     }
     &__link{
         box-shadow: -20px 60px 220px rgb(0 0 0 / 21%);
@@ -79,6 +108,10 @@
 
         @media screen and (max-width:$width-media-middle){
             padding: 15px;
+        }
+        @media screen and (max-width:$width-media-small){
+            box-shadow: none;
+            padding: 0;
         }
     }
     &__picture{
@@ -94,7 +127,46 @@
             @include fonts(0,16px,0,0); 
         }
         @media screen and (max-width:$width-media-middle){
-            @include fonts(0,14px,0,0); 
+            @include fonts(0,14px,18px,0); 
+        }
+        @media screen and (max-width:$width-media-small){
+            margin: 0;
+
+            text-align: center;
+        }
+        &.name_dark-theme{
+            @media screen and (max-width: $width-media-small) {
+                color: $primary-font-color;
+            }
+        }
+    }
+    &__points{
+        display: none;
+
+        margin: 0;
+        margin-top: 20px;
+        padding: 0;
+
+        list-style-type: none;
+
+        @media screen and (max-width:$width-media-small){
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__point{
+        width: 4px;
+        height: 4px;
+
+        background-color: #CACACA;
+        border-radius: 50%;
+
+        margin-right: 5px;
+        &:last-child{
+            margin-right: 0;
+        }
+        &_active{
+            background-color: $primary-font-color;
         }
     }
 

@@ -1,0 +1,6 @@
+.arrow_dark-theme {
+  background-color: #434343;
+}
+.arrow_dark-theme:before {
+  filter: invert(1);
+}/*# sourceMappingURL=arrow.css.map */
