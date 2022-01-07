@@ -42,7 +42,10 @@
     &__application-link{
         text-decoration: none;
         color: $primary-font-color;
+        
         @include fonts(600,18px,28px,0);
+
+        transition: opacity 0.4s linear;
         &:hover{
             opacity: 0.75;
         }

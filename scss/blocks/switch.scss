@@ -45,5 +45,8 @@
                 height: 19.35px;
             }
         }
+        &_dark-theme{
+            filter: invert(0.5);
+        }
     }
 }

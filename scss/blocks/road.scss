@@ -98,6 +98,8 @@
         padding: 0;
         background-color: #EBEBEB;
 
+        transition: opacity 0.4s linear;
+
         @media screen and (max-width:$width-media-small){
             width: 24px;
             height: 24px;

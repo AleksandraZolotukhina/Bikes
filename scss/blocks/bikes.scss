@@ -41,8 +41,9 @@
 
         cursor: pointer;
         color: $accent-font-color;
-        opacity: 0.7;
 
+        opacity: 0.7;
+        transition: opacity 0.4s linear;
         @media screen and (max-width:$width-media-middle){
             @include fonts(0,16px,28px,0);
         }
@@ -67,7 +68,7 @@
 
         list-style-type: none;
         margin: 0;
-        margin-top: 120px;
+        margin-top: 113px;
         padding: 0;
 
         @media screen and (max-width:$width-media-large){
@@ -105,7 +106,7 @@
 
         cursor: pointer; 
         padding: 20px;
-
+    
         @media screen and (max-width:$width-media-middle){
             padding: 15px;
         }

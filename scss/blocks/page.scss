@@ -33,7 +33,7 @@
         }
     }
     &__footer{
-        padding: 74px 120px;
+        padding: 82px 120px;
         padding-bottom: 60px;
 
         @media screen and (max-width:$width-media-large){
@@ -41,7 +41,7 @@
         } 
         @media screen and (max-width:$width-media-small){
             padding: 25px 18px;
-            padding-top: 60px;
+            padding-top: 56px;
         }
     }
     &__title{

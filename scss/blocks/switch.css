@@ -36,4 +36,7 @@
 .switch__picture_type_moon {
   width: 19.35px;
   height: 19.35px;
+}
+.switch__picture_dark-theme {
+  filter: invert(0.5);
 }/*# sourceMappingURL=switch.css.map */

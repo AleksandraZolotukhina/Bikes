@@ -17,6 +17,26 @@ const bikesCards = document.querySelector(".bikes__cards");
 const bikesTemplate = bikesCards.querySelector(".bikes__template");
 const linkRoads = document.querySelectorAll(".bikes__item");
 
+const switchPictures = document.querySelectorAll(".switch__picture");
+const checkboxes = document.querySelectorAll(".switch__checkbox");
+const arrow = document.querySelectorAll(".arrow");
+const popups = document.querySelectorAll(".popup");
+const email = document.querySelectorAll(".email");
+
+const buttonEmail = document.querySelector(".button-email");
+const page = document.querySelector(".page");
+const footer = document.querySelector(".footer");
+const copyright = document.querySelector(".copyright");
+const footerEmailContainer = footer.querySelector(".footer__email-container");
+const footerEmail = footer.querySelector(".footer__email");
+const footerButton = footer.querySelector(".footer__button");
+
+const bikesPlace = document.querySelector("#bikes-place");
+
+
+const bikesPoints = document.querySelector(".bikes__points");
+const pointsTemplate = bikesPoints.querySelector(".bikes__template-points");
+
 const acitveBike = document.querySelector(".bikes__item_active");
 const arrayRoads = [["Шоссе", 
 "На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.",
@@ -34,24 +54,6 @@ const gravelBikes = [["Cervelo Aspero GRX 810","https://www.sigmasports.com/item
 const ttBikes = [["Specialized S-Works Shiv","https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9","./images/Specialized_S-Works_Shiv.png"],
 ["BMC Timemachine 01 ONE","https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835","./images/BMC_Timemachine_01 ONE.png"],
 ["Cervelo P-Series","https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q","./images/Cervelo_P-Series.png "]]
-
-const switcher = document.querySelectorAll(".page__switcher");
-const checkboxes = document.querySelectorAll(".switch__checkbox");
-const arrow = document.querySelectorAll(".arrow");
-const email = document.querySelectorAll(".email");
-const page = document.querySelector(".page");
-const footer = document.querySelector(".footer");
-const popups = document.querySelectorAll(".popup");
-
-const footerEmailContainer = footer.querySelector(".footer__email-container");
-const footerEmail = footer.querySelector(".footer__email");
-const footerButton = footer.querySelector(".footer__button");
-
-const bikesPlace = document.querySelector("#bikes-place");
-
-
-const bikesPoints = document.querySelector(".bikes__points");
-const pointsTemplate = bikesPoints.querySelector(".bikes__template-points");
 
 function removePoints(){
     const points = bikesPoints.querySelectorAll(".bikes__point");
@@ -108,6 +110,7 @@ function toggleBikes(){
 
         bikesLink.href = el[1];
         bikesPicture.src = el[2];
+        bikesPicture.alt = el[0];
         bikesName.textContent = el[0];
         
         bikesCards.append(cloneBikes);
@@ -129,7 +132,7 @@ toggleBikes();
 // удаляем карточки с велосипедами
 function removeBikes(){
     const bikesCard = document.querySelectorAll(".bikes__card");
-    bikesCard.forEach(bike=>bike.remove())
+    bikesCard.forEach(bike=>bike.remove());
 }
 
 function changeActiveEl(action){
@@ -151,7 +154,7 @@ function changeActiveEl(action){
 
 }
 
-// при изменении select-а
+// при изменении select-а удаляем велосипеды и загружаем новые
 bikesPlace.addEventListener("change", function(){
     removeBikes();
     toggleBikes();
@@ -277,10 +280,12 @@ checkboxes.forEach(checkbox=>{
         popups.forEach(el=>{
             el.classList.toggle("popup_dark-theme");
         })
-        switcher.forEach(el=>{
-            el.classList.toggle("switch_dark-theme");
+        switchPictures.forEach(el=>{
+            el.classList.toggle("switch__picture_dark-theme");
         })
         page.classList.toggle("page_dark-theme");
         footer.classList.toggle("footer_dark-theme");
+        copyright.classList.toggle("copyright_dark-theme");
+        buttonEmail.classList.toggle("button-email_dark-theme");
     })
 })

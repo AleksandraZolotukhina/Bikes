@@ -29,7 +29,7 @@
   }
 }
 .page__footer {
-  padding: 74px 120px;
+  padding: 82px 120px;
   padding-bottom: 60px;
 }
 @media screen and (max-width: 1200px) {
@@ -40,7 +40,7 @@
 @media screen and (max-width: 600px) {
   .page__footer {
     padding: 25px 18px;
-    padding-top: 60px;
+    padding-top: 56px;
   }
 }
 .page__title {
@@ -149,6 +149,9 @@
   width: 19.35px;
   height: 19.35px;
 }
+.switch__picture_dark-theme {
+  filter: invert(0.5);
+}
 
 .header__main-nav {
   max-width: 83.3333333333%;
@@ -175,6 +178,7 @@
   margin-right: 32px;
   text-decoration: none;
   color: #151515;
+  transition: opacity 0.4s linear;
 }
 .header__main-link:last-child {
   margin-right: 0;
@@ -432,7 +436,12 @@
 }
 
 .popup {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s linear, visibility 0.3s linear;
   position: fixed;
   z-index: 2;
   width: 100%;
@@ -444,9 +453,8 @@
   background-color: #333333;
 }
 .popup_opened {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  visibility: visible;
+  opacity: 1;
 }
 .popup__links {
   display: flex;
@@ -539,7 +547,7 @@
 .main-content__bikes {
   max-width: 83.3333333333%;
   margin: 0 auto;
-  margin-top: 120px;
+  margin-top: 113px;
 }
 @media screen and (max-width: 1200px) {
   .main-content__bikes {
@@ -561,13 +569,13 @@
 @media screen and (max-width: 1200px) {
   .main-content__workout {
     max-width: 88.75%;
-    margin-top: 80px;
+    margin-top: 77px;
   }
 }
 @media screen and (max-width: 600px) {
   .main-content__workout {
     border-top: 1px solid #E3E3E3;
-    padding-top: 20px;
+    padding-top: 38px;
   }
 }
 
@@ -788,6 +796,7 @@
   border: 0;
   padding: 0;
   background-color: #EBEBEB;
+  transition: opacity 0.4s linear;
 }
 @media screen and (max-width: 600px) {
   .road__button {
@@ -882,6 +891,7 @@
   cursor: pointer;
   color: #222222;
   opacity: 0.7;
+  transition: opacity 0.4s linear;
 }
 @media screen and (max-width: 950px) {
   .bikes__item {
@@ -909,7 +919,7 @@
   gap: 30px;
   list-style-type: none;
   margin: 0;
-  margin-top: 120px;
+  margin-top: 113px;
   padding: 0;
 }
 @media screen and (max-width: 1200px) {
@@ -1084,6 +1094,7 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
+  transition: opacity 0.4s linear;
 }
 .workout__application-link:hover {
   opacity: 0.75;
@@ -1181,6 +1192,11 @@
   align-items: center;
   margin-top: 100px;
 }
+@media screen and (max-width: 600px) {
+  .footer__container {
+    margin-top: 88px;
+  }
+}
 .footer__copyright {
   margin: 0;
   font-style: normal;
@@ -1191,8 +1207,8 @@
 }
 .footer__logo {
   display: none;
-  width: 38px;
-  height: 38px;
+  width: 35px;
+  height: 35px;
 }
 @media screen and (max-width: 600px) {
   .footer__logo {
@@ -1219,8 +1235,17 @@
   color: #E5E5E5;
 }
 
-.email_theme-dark {
+.email_dark-theme {
   background-color: #2F2F2F;
+  border-color: rgba(125, 125, 125, 0.5);
+  color: #FFFFFF;
+}
+.email_dark-theme:hover {
+  color: #FFFFFF;
+  border-color: #7D7D7D;
+}
+.email_dark-theme:focus {
+  outline-color: #7D7D7D;
 }
 
 .arrow_dark-theme {
@@ -1228,4 +1253,12 @@
 }
 .arrow_dark-theme:before {
   filter: invert(1);
+}
+
+.copyright_dark-theme {
+  color: #565656;
+}
+
+.button-email_dark-theme {
+  color: #FFFFFF;
 }/*# sourceMappingURL=index.css.map */

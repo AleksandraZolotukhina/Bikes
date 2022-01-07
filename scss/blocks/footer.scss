@@ -76,6 +76,10 @@
         align-items: center;
 
         margin-top: 100px;
+
+        @media screen and (max-width:$width-media-small){
+            margin-top: 88px;
+        }
     }
     &__copyright{
         margin: 0;
@@ -86,8 +90,8 @@
     &__logo{
         display: none;
 
-        width: 38px;
-        height: 38px;
+        width: 35px;
+        height: 35px;
 
         @media screen and (max-width:$width-media-small){
             display: block;

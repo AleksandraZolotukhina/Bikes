@@ -1,5 +1,14 @@
 .email{
-    &_theme-dark{
+    &_dark-theme{
         background-color: $accent-back-color-dark;
+        border-color: rgba(125, 125, 125, 0.5);
+        color: $primary-font-color-dark;
+        &:hover{
+            color: $primary-font-color-dark;
+            border-color: #7D7D7D;
+        }
+        &:focus{
+            outline-color: #7D7D7D;
+        }
     }
 }
