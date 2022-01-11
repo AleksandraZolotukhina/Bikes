@@ -1,7 +1,7 @@
 const buttonBurger = document.querySelector(".header__burger");
-const headerPopup = document.querySelector(".header__popup");
-const popupClose = document.querySelector(".popup__button_el_close");
-const popupLinks = headerPopup.querySelectorAll(".popup__link");
+const popup = document.querySelector(".popup");
+const popupClose = popup.querySelector(".popup__button_el_close");
+const popupLinks = popup.querySelectorAll(".popup__link");
 
 const road = document.querySelector(".road");
 const roadTemplate = road.querySelector(".road__template");
@@ -217,7 +217,7 @@ roadButtonBack.addEventListener("click", function(){
 })
 
 // при нажатии на email-container появляется кнопка "ок"
-footerEmailContainer.addEventListener("click", function(){
+footerEmail.addEventListener("click", function(){
     footerButton.classList.add("button_visible");
 })
 
@@ -241,18 +241,18 @@ function togglePopup(popup) {
 
 //  открываем popup при нажатии на бургер
 buttonBurger.addEventListener("click", function () {
-    togglePopup(headerPopup)
+    togglePopup(popup)
 });
 
 //  закрываем popup при нажатии на крестик
 popupClose.addEventListener("click", function () {
-    togglePopup(headerPopup);
+    togglePopup(popup);
 })
 
 // при переходе на другую часть страницы popup закрывается
 popupLinks.forEach(el => {
     el.addEventListener("click", function () {
-        togglePopup(headerPopup);
+        togglePopup(popup);
     })
 })
 
@@ -263,29 +263,29 @@ checkboxes.forEach(checkbox=>{
         const text = document.querySelectorAll(".text");
 
         title.forEach(el=>{
-            el.classList.toggle("title_dark-theme");
+            el.classList.toggle("title_theme_dark");
         })
         names.forEach(el=>{
-            el.classList.toggle("name_dark-theme");
+            el.classList.toggle("name_theme_dark");
         })
         arrow.forEach(el=>{
-            el.classList.toggle("arrow_dark-theme");
+            el.classList.toggle("arrow_theme_dark");
         })
         text.forEach(el=>{
-            el.classList.toggle("text_dark-theme");
+            el.classList.toggle("text_theme_dark");
         })
         email.forEach(el=>{
-            el.classList.toggle("email_dark-theme");
+            el.classList.toggle("email_theme_dark");
         })
         popups.forEach(el=>{
-            el.classList.toggle("popup_dark-theme");
+            el.classList.toggle("popup_theme_dark");
         })
         switchPictures.forEach(el=>{
-            el.classList.toggle("switch__picture_dark-theme");
+            el.classList.toggle("switch__picture_theme_dark");
         })
-        page.classList.toggle("page_dark-theme");
-        footer.classList.toggle("footer_dark-theme");
-        copyright.classList.toggle("copyright_dark-theme");
-        buttonEmail.classList.toggle("button-email_dark-theme");
+        page.classList.toggle("page_theme_dark");
+        footer.classList.toggle("footer_theme_dark");
+        copyright.classList.toggle("copyright_theme_dark");
+        buttonEmail.classList.toggle("button-email_theme_dark");
     })
 })

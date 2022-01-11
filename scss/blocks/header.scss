@@ -31,35 +31,28 @@
     }
     &__burger{
         display: none;
-        position: absolute;
-        top: 33px;
-        right: 18px;
-
-        width: 20px;
-
-        border: 1px solid $primary-font-color;
         cursor: pointer;
-        
+
+        margin-top: 25px;
+        margin-right: 18px;
+
+        transition: opacity 0.4s linear;
         &:hover{
             opacity: 0.7;
         }
         @media screen and (max-width:$width-media-small){
-            display:block;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
         }
-        &::after,&::before{
-            content: "";
-            position: absolute;
-            width: 20px;
+    }
+    &__line{
+        width: 20px;
+        border: 1px solid $primary-font-color;
+        margin-bottom:6px;
 
-            border: 1px solid $primary-font-color;
-        }
-        &::after{
-            top: 7px;
-            right: -1px;
-        }
-        &::before{
-            top: -9px;
-            right: -1px;
+        &:last-of-type{
+            margin-bottom:0;
         }
     }
     &__content{
@@ -88,7 +81,7 @@
             grid-template-rows: repeat(5,auto);
             row-gap: 40px;
 
-            padding-top: 114px;
+            margin-top: 51px;
         }
 
     }
@@ -136,7 +129,7 @@
     }
     &__button{
         grid-column: 1/2;
-        @include fonts(600,14px,18px,1px);
+        @include fonts(600,13px,19px,1px);
         margin-bottom: 136px;
         width: 180px;
         height: 50px;

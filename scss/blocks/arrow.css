@@ -1,6 +1,6 @@
-.arrow_dark-theme {
+.arrow_theme_dark {
   background-color: #434343;
 }
-.arrow_dark-theme:before {
+.arrow_theme_dark:before {
   filter: invert(1);
 }/*# sourceMappingURL=arrow.css.map */

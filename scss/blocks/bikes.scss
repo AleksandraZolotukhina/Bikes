@@ -2,13 +2,17 @@
     &__place{
         display: none;
 
+        width: 114px;
         border: 1px solid #E3E3E3;
         border-radius: 2px;
         padding: 8px 12px;
-
+        -webkit-appearance: none;
+        background: url("../images/Arrow_down.svg") no-repeat;
+        background-position: 90px;
         @include fonts(600,11px,14px,0);
         color:$primary-font-color;
         background-color: $primary-back-color;
+
         @media screen and (max-width:$width-media-small){
             display: block;
             margin-top: 40px;

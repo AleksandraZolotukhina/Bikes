@@ -44,7 +44,7 @@
                 content: "";
                 display: inline-block;
 
-                background-image: url("../images/Vector.png");
+                background-image: url("../images/Vector.svg");
                 background-size: cover;
                 
                 position: absolute;
@@ -61,7 +61,7 @@
                 content: "";
                 display: inline-block;
 
-                background-image: url("../images/Rectangle.png");
+                background-image: url("../images/Rectangle.svg");
                 background-size: cover;
 
                 width: 100px;
@@ -111,7 +111,7 @@
         &::before{
             content: "";
             display: inline-block;
-            background-image: url("../images/Arrow_next.png");
+            background-image: url("../images/Arrow_next.svg");
             background-size: 7px 16px;
             width: 7px;
             height: 16px;
@@ -133,7 +133,7 @@
                     opacity: 0.6;
                 }
                 &::before{
-                    background-image: url("../images/Arrow_back.png");
+                    background-image: url("../images/Arrow_back.svg");
                 }
             }
             &_next{

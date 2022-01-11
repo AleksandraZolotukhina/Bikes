@@ -10,7 +10,7 @@
 
 <body class="page">
     <header class="page__header header">
-        <div class="header__popup popup">
+        <div class="popup">
             <button class="popup__button popup__button_el_close" type="button"></button>
             <nav class="header__main-nav popup__links">
                 <a class="header__main-link popup__link name" href="#coverings">Покрытия и градиенты</a>
@@ -26,9 +26,12 @@
         <nav class="header__main-nav">
             <a class="header__main-link name" href="#coverings">Покрытия и градиенты</a>
             <a class="header__main-link name" href="#bike">Велосипеды</a>
-            <a class="header__main-link name" href="#workout">Тренировки</a> <!-- анимация при наведении мыши-->
+            <a class="header__main-link name" href="#workout">Тренировки</a>
         </nav>
         <div class="header__burger">
+            <span class="header__line"></span>
+            <span class="header__line"></span>
+            <span class="header__line"></span>
         </div>
         <div class="header__content">
             <h1 class="page__title page__title_place_header title">Шоссе, ТТ и Грэвел</h1>
@@ -115,7 +118,7 @@
     </main>
     <footer class="page__footer footer">
         <h3 class="footer__title title">Подпишитесь на рассылку —</h3>
-        <div class="footer__email-container">
+        <div class="footer__email-container email">
             <input class="footer__email email" type="email" placeholder="Ваш e-mail">
             <button class="footer__button button-email button-email_dark_theme">ok</button>
         </div>
@@ -129,7 +132,7 @@
             <img class="footer__logo" src="./images/logo.svg" alt="Логотип">
         </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>
