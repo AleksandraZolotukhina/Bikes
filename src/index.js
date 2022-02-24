@@ -1,3 +1,19 @@
+import './pages/index.css';
+
+import highway from "./../images/Highway.png";
+import gravel from "./../images/Gravel.png";
+import tt from "./../images/TT.png";
+
+import Cervelo_Caledonia_5 from "./../images/Cervelo_Caledonia_5.png";
+import Cannondale_Systemsix_Himod from "./../images/Cannondale_Systemsix_Himod.png";
+import Trek_Domane_SL_7 from "./../images/Cervelo_Aspero_GRX_810.png";
+import Cervelo_Aspero_GRX_810 from "./../images/Cervelo_Aspero_GRX_810.png";
+import Specialized_S_Works_Diverge from "./../images/Specialized_S-Works_Diverge.png";
+import Cannondale_Topstone_Lefty_3 from "./../images/Cannondale_Topstone_Lefty_3.png";
+import Specialized_S_Works_Shiv from "./../images/Specialized_S-Works_Shiv.png"
+import BMC_Timemachine_01 from"./../images/BMC_Timemachine_01 ONE.png";
+import Cervelo_P_Series from"./../images/Cervelo_P-Series.png";
+
 const buttonBurger = document.querySelector(".header__burger");
 const popup = document.querySelector(".popup");
 const popupClose = popup.querySelector(".popup__button_el_close");
@@ -38,22 +54,25 @@ const bikesPoints = document.querySelector(".bikes__points");
 const pointsTemplate = bikesPoints.querySelector(".bikes__template-points");
 
 const acitveBike = document.querySelector(".bikes__item_active");
+
+
 const arrayRoads = [["Шоссе", 
 "На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.",
-"./images/Highway.png"],["Грэвел",
+highway],["Грэвел",
 "Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью.",
-"./images/Gravel.png"],["ТТ",
-"ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный.","./images/TT.png"]];
+gravel],["ТТ",
+"ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный.",tt]];
 
-const highwayBikes = [["Cervelo Caledonia 5","https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN","./images/Cervelo_Caledonia_5.png"],
-["Cannondale Systemsix Himod","https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J","./images/Cannondale_Systemsix_Himod.png"],
-["Trek Domane SL-7","https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF","./images/Trek_Domane_SL-7.png"]]
-const gravelBikes = [["Cervelo Aspero GRX 810","https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE","./images/Cervelo_Aspero_GRX_810.png"],
-["Specialized S-Works Diverge","https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9","./images/Specialized_S-Works_Diverge.png"],
-["Cannondale Topstone Lefty 3","https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8","./images/Cannondale_Topstone_Lefty_3.png"]];
-const ttBikes = [["Specialized S-Works Shiv","https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9","./images/Specialized_S-Works_Shiv.png"],
-["BMC Timemachine 01 ONE","https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835","./images/BMC_Timemachine_01 ONE.png"],
-["Cervelo P-Series","https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q","./images/Cervelo_P-Series.png "]]
+
+const highwayBikes = [["Cervelo Caledonia 5","https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN",Cervelo_Caledonia_5 ],
+["Cannondale Systemsix Himod","https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J",Cannondale_Systemsix_Himod],
+["Trek Domane SL-7","https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF",Trek_Domane_SL_7]]
+const gravelBikes = [["Cervelo Aspero GRX 810","https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE",Cervelo_Aspero_GRX_810],
+["Specialized S-Works Diverge","https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9",Specialized_S_Works_Diverge],
+["Cannondale Topstone Lefty 3","https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8",Cannondale_Topstone_Lefty_3]];
+const ttBikes = [["Specialized S-Works Shiv","https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9",Specialized_S_Works_Shiv],
+["BMC Timemachine 01 ONE","https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835",BMC_Timemachine_01],
+["Cervelo P-Series","https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q",Cervelo_P_Series]]
 
 function removePoints(){
     const points = bikesPoints.querySelectorAll(".bikes__point");
@@ -101,7 +120,7 @@ function toggleBikes(){
             arrayBikes = ttBikes;
             break;        
     }
-    // заполняем каждую карточку велосипеда 
+    //заполняем каждую карточку велосипеда 
     arrayBikes.forEach(el=>{
         const cloneBikes = bikesTemplate.content.cloneNode(true);
         let bikesLink = cloneBikes.querySelector(".bikes__link");
@@ -129,7 +148,7 @@ function toggleBikes(){
 }
 toggleBikes();
 
-// удаляем карточки с велосипедами
+//удаляем карточки с велосипедами
 function removeBikes(){
     const bikesCard = document.querySelectorAll(".bikes__card");
     bikesCard.forEach(bike=>bike.remove());
@@ -154,14 +173,14 @@ function changeActiveEl(action){
 
 }
 
-// при изменении select-а удаляем велосипеды и загружаем новые
+//при изменении select-а удаляем велосипеды и загружаем новые
 bikesPlace.addEventListener("change", function(){
     removeBikes();
     toggleBikes();
 
     changeActiveEl("bikesPlace");
 })
-// загружаем новые велосипеды при нажатии  
+//загружаем новые велосипеды при нажатии  
 linkRoads.forEach(el=>{
     el.addEventListener("click", function(){
         removeBikes();
@@ -174,11 +193,13 @@ linkRoads.forEach(el=>{
         changeActiveEl("linkRoads");
     })
 })
-
+let currentIndex=0
+roadTitle.textContent = arrayRoads[currentIndex][0];
+roadText.textContent = arrayRoads[currentIndex][1];
 roadButtonBack.disabled=true;
-let currentIndex=0;
 
-// загружаем инфорамацию дорог из массива
+
+//загружаем инфорамацию дорог из массива
 function toggleRoads(){
     roadTitle.textContent = arrayRoads[currentIndex][0];
     roadText.textContent = arrayRoads[currentIndex][1];
@@ -196,7 +217,7 @@ function toggleRoads(){
 toggleRoads();
 road.prepend(cloneRoad);
 
-// при нажатии на кнопку ">" загружаем следующую дорогу
+//при нажатии на кнопку ">" загружаем следующую дорогу
 roadButtonNext.addEventListener("click", function(){
     roadButtonBack.disabled=false;
     currentIndex++;
@@ -206,7 +227,7 @@ roadButtonNext.addEventListener("click", function(){
     }
 })
 
-// при нажатии на кнопку "<" загружаем предыдущую дорогу
+//при нажатии на кнопку "<" загружаем предыдущую дорогу
 roadButtonBack.addEventListener("click", function(){  
     currentIndex = currentIndex - 1;
     roadButtonNext.disabled = false;
@@ -216,40 +237,40 @@ roadButtonBack.addEventListener("click", function(){
     }
 })
 
-// при нажатии на email-container появляется кнопка "ок"
+//при нажатии на email-container появляется кнопка "ок"
 footerEmail.addEventListener("click", function(){
     footerButton.classList.add("button_visible");
 })
 
-// при нажатии на кнопку "ок" появляется сообщение и блокируется доступ к кнопке и форме
+//при нажатии на кнопку "ок" появляется сообщение и блокируется доступ к кнопке и форме
 footerButton.addEventListener("click", function(){
     footerEmail.value="Круто!";
     footerButton.disabled = true;
     footerEmail.disabled = true;
 })
 
-// при перемещении курсора за границу элемента кнопка "ок" исчезает
+//при перемещении курсора за границу элемента кнопка "ок" исчезает
 footerEmailContainer.addEventListener("mouseleave", function(){
     footerButton.classList.remove("button_visible");
 })
 
 
-//  переключение видимости popup-а 
+//переключение видимости popup-а 
 function togglePopup(popup) {
     popup.classList.toggle("popup_opened");
 }
 
-//  открываем popup при нажатии на бургер
+//открываем popup при нажатии на бургер
 buttonBurger.addEventListener("click", function () {
     togglePopup(popup)
 });
 
-//  закрываем popup при нажатии на крестик
+//закрываем popup при нажатии на крестик
 popupClose.addEventListener("click", function () {
     togglePopup(popup);
 })
 
-// при переходе на другую часть страницы popup закрывается
+//при переходе на другую часть страницы popup закрывается
 popupLinks.forEach(el => {
     el.addEventListener("click", function () {
         togglePopup(popup);
