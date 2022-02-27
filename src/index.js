@@ -16,14 +16,40 @@ import Cervelo_P_Series from "./../images/Cervelo_P-Series.png";
 
 const swiper = new Swiper('.swiper', {
     initialSlide: 0,
-    allowTouchMove: false,
     loop: true,
+    breakpoints: {
+        320:{
+            allowTouchMove: true,
+        },
+        600:{
+            allowTouchMove: false,
+        }
+    },
     navigation: {
         nextEl: '.road__button_type_next',
         prevEl: '.road__button_type_back',
     },
 });
 
+
+const swiperBikes = new Swiper(".swiper-bikes", {
+    initialSlide: 0,
+    breakpoints: {
+        320:{
+            enabled: true,
+            allowTouchMove: true,
+            //width: null,
+        },
+        600:{
+            enabled: false,
+            width: 0
+        }
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
+})
 const buttonBurger = document.querySelector(".header__burger");
 const popup = document.querySelector(".popup");
 const popupClose = popup.querySelector(".popup__button_el_close");
@@ -84,17 +110,17 @@ const ttBikes = [["Specialized S-Works Shiv", "https://www.sigmasports.com/item/
 ["BMC Timemachine 01 ONE", "https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835", BMC_Timemachine_01],
 ["Cervelo P-Series", "https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q", Cervelo_P_Series]]
 
-function removePoints() {
-    const points = bikesPoints.querySelectorAll(".bikes__point");
-    points.forEach(point => point.remove())
-}
-function appearPoints(count) {
-    for (let i = 0; i < count; i++) {
-        const clonePoints = pointsTemplate.content.cloneNode(true);
-        const point = clonePoints.querySelector(".bikes__point");
-        bikesPoints.append(point);
-    }
-}
+// function removePoints() {
+//     const points = bikesPoints.querySelectorAll(".bikes__point");
+//     points.forEach(point => point.remove())
+// }
+// function appearPoints(count) {
+//     for (let i = 0; i < count; i++) {
+//         const clonePoints = pointsTemplate.content.cloneNode(true);
+//         const point = clonePoints.querySelector(".bikes__point");
+//         bikesPoints.append(point);
+//     }
+// }
 
 let index = 0;
 while (index < arrayRoads.length) {
@@ -114,18 +140,18 @@ while (index < arrayRoads.length) {
     index++;
 }
 
-function slider(cards, classVisible) {
-    let i = 0;
-    setInterval(function () {
-        cards[i].classList.remove(classVisible);
+// function slider(cards, classVisible) {
+//     let i = 0;
+//     setInterval(function () {
+//         cards[i].classList.remove(classVisible);
 
-        if (i === cards.length - 1) {
-            i = -1;
-        }
-        cards[i + 1].classList.add(classVisible);
-        i++;
-    }, 2000)
-}
+//         if (i === cards.length - 1) {
+//             i = -1;
+//         }
+//         cards[i + 1].classList.add(classVisible);
+//         i++;
+//     }, 2000)
+// }
 
 function toggleBikes() {
     let acitveBike;
@@ -134,7 +160,6 @@ function toggleBikes() {
     }
     else {
         acitveBike = bikesPlace.options[bikesPlace.selectedIndex].text;
-
     }
     let arrayBikes = [];
     switch (acitveBike) {
@@ -149,30 +174,18 @@ function toggleBikes() {
             break;
     }
     //заполняем каждую карточку велосипеда 
-    arrayBikes.forEach(el => {
-        const cloneBikes = bikesTemplate.content.cloneNode(true);
-        let bikesLink = cloneBikes.querySelector(".bikes__link");
-        let bikesPicture = cloneBikes.querySelector(".bikes__picture");
-        let bikesName = cloneBikes.querySelector(".bikes__name");
+    arrayBikes.forEach((el, index) => {
+        const cloneBikes = bikesTemplate.content.querySelector(".bikes__card").cloneNode(true);
+        const bikesLink = cloneBikes.querySelector(".bikes__link");
+        const bikesPicture = cloneBikes.querySelector(".bikes__picture");
+        const bikesName = cloneBikes.querySelector(".bikes__name");
 
         bikesLink.href = el[1];
         bikesPicture.src = el[2];
         bikesPicture.alt = el[0];
         bikesName.textContent = el[0];
-
-        bikesCards.append(cloneBikes);
-
+        swiperBikes.addSlide(index, cloneBikes); 
     })
-    const cards = document.querySelectorAll(".bikes__card");
-    const card = document.querySelector(".bikes__card");
-    card.classList.add("bikes__card_visible");
-    slider(cards, "bikes__card_visible");
-
-    removePoints();
-    appearPoints(arrayBikes.length);
-    const point = document.querySelector(".bikes__point");
-    point.classList.add("bikes__point_active");
-    slider(document.querySelectorAll(".bikes__point"), "bikes__point_active");
 }
 toggleBikes();
 
@@ -221,49 +234,6 @@ linkRoads.forEach(el => {
         changeActiveEl("linkRoads");
     })
 })
-// let currentIndex=0
-// roadTitle.textContent = arrayRoads[currentIndex][0];
-// roadText.textContent = arrayRoads[currentIndex][1];
-// roadButtonBack.disabled=true;
-
-
-//загружаем инфорамацию дорог из массива
-// function toggleRoads(){
-//     roadTitle.textContent = arrayRoads[currentIndex][0];
-//     roadText.textContent = arrayRoads[currentIndex][1];
-
-//     let i=currentIndex;
-//     roadPictures.forEach(el=>{
-//         el.src=arrayRoads[i][2];
-//         el.alt=arrayRoads[i][0];
-//         i++;
-//         if(i===arrayRoads.length){
-//             i=0;
-//         }
-//     })  
-// }
-// toggleRoads();
-// road.prepend(cloneRoad);
-
-//при нажатии на кнопку ">" загружаем следующую дорогу
-// roadButtonNext.addEventListener("click", function(){
-//     roadButtonBack.disabled=false;
-//     currentIndex++;
-//     toggleRoads();
-//     if(currentIndex + 1 === arrayRoads.length){
-//         roadButtonNext.disabled=true;
-//     }
-// })
-
-//при нажатии на кнопку "<" загружаем предыдущую дорогу
-// roadButtonBack.addEventListener("click", function(){  
-//     currentIndex = currentIndex - 1;
-//     roadButtonNext.disabled = false;
-//     toggleRoads();
-//     if(currentIndex === 0){
-//         roadButtonBack.disabled = true;
-//     }
-// })
 
 //при нажатии на email-container появляется кнопка "ок"
 footerEmail.addEventListener("click", function () {

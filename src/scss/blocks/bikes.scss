@@ -92,16 +92,14 @@
         flex-direction: column;
 
         @media screen and (max-width:$width-media-small){
-            display: none;
+            display: block;
             background-color: #F4F4F4;
             border-radius: 20px;
             box-shadow: -20px 60px 220px rgb(0 0 0 / 21%);
-
+            box-sizing: border-box;
             padding: 16px 14.95px;
         }
-        &_visible{
-            display: flex;
-        }
+
     }
     &__link{
         box-shadow: -20px 60px 220px rgb(0 0 0 / 21%);

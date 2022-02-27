@@ -95,21 +95,23 @@
                     <option class="bikes__element text" value="tt">TT</option>
                 </select>
             </div>
-            <ul class="bikes__cards">
-                <template class="bikes__template">
-                    <li class="bikes__card">
-                        <a class="bikes__link">
-                            <img class="bikes__picture">
-                        </a>
-                        <p class="bikes__name name"></p>
-                    </li>
-                </template>
-            </ul>
-            <ul class="bikes__points">
-                <template class="bikes__template-points">
-                    <li class="bikes__point"></li>
-                </template>
-            </ul>
+            <div class="swiper-bikes">
+                <ul class="bikes__cards swiper-wrapper">
+                    <template class="bikes__template">
+                        <li class="bikes__card swiper-slide">
+                            <a class="bikes__link">
+                                <img class="bikes__picture">
+                            </a>
+                            <p class="bikes__name name"></p>
+                        </li>
+                    </template>
+                </ul>
+                <ul class="bikes__points swiper-pagination">
+                    <template class="bikes__template-points">
+                        <li class="bikes__point"></li>
+                    </template>
+                </ul>
+            </div>
         </section>
         <section class="main-content__workout workout" id="workout">
             <h2 class="page__title page__title_place_workout title">Тренировки</h2>

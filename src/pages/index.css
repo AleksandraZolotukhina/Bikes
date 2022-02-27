@@ -782,7 +782,7 @@
   .road__buttons {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 40px;
     z-index: 1;
     margin: 0;
   }
@@ -947,15 +947,13 @@
 }
 @media screen and (max-width: 600px) {
   .bikes__card {
-    display: none;
+    display: block;
     background-color: #F4F4F4;
     border-radius: 20px;
     box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.21);
+    box-sizing: border-box;
     padding: 16px 14.95px;
   }
-}
-.bikes__card_visible {
-  display: flex;
 }
 .bikes__link {
   box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.21);
