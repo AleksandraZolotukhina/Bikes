@@ -19,4 +19,4 @@
 
 - GitHub Pages
 
-[Ссылка GitHub Pages](https://alexandrazolotykhina.github.io/HARD-01/index.html)
+[Ссылка GitHub Pages](https://alexandrazolotykhina.github.io/Bikes/index.html)
