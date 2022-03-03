@@ -1,4 +1,11 @@
 .bikes{
+    & .swiper{
+        
+        @media screen and (min-width:$width-media-small){
+            overflow: visible;
+        }
+    }
+
     &__place{
         display: none;
 
@@ -82,9 +89,10 @@
             margin-top: 40px;
         }
         @media screen and (max-width:$width-media-small){
+            display: flex;
+            gap: 0;
+
             margin-top: 20px;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 360px));
-            justify-content: center;
         }
     }
     &__card{
@@ -95,7 +103,7 @@
             display: block;
             background-color: #F4F4F4;
             border-radius: 20px;
-            box-shadow: -20px 60px 220px rgb(0 0 0 / 21%);
+            
             box-sizing: border-box;
             padding: 16px 14.95px;
         }
@@ -120,6 +128,11 @@
     &__picture{
         width: 100%;
         object-fit: contain;
+        @media screen and (max-width: $width-media-small) {
+            border-radius: 20px;
+            box-shadow: -8px 6px 21px rgb(0 0 0 / 21%);
+        }
+        
     }
     &__name{
         margin: 0;

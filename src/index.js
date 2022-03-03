@@ -14,14 +14,14 @@ import Specialized_S_Works_Shiv from "./../images/Specialized_S-Works_Shiv.png"
 import BMC_Timemachine_01 from "./../images/BMC_Timemachine_01 ONE.png";
 import Cervelo_P_Series from "./../images/Cervelo_P-Series.png";
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.road', {
     initialSlide: 0,
     loop: true,
     breakpoints: {
-        320:{
+        320: {
             allowTouchMove: true,
         },
-        600:{
+        600: {
             allowTouchMove: false,
         }
     },
@@ -32,24 +32,36 @@ const swiper = new Swiper('.swiper', {
 });
 
 
-const swiperBikes = new Swiper(".swiper-bikes", {
-    initialSlide: 0,
-    breakpoints: {
-        320:{
-            enabled: true,
-            allowTouchMove: true,
-            //width: null,
-        },
-        600:{
-            enabled: false,
-            width: 0
+
+
+const breakpoint = window.matchMedia('(min-width:600px)');
+let swiperBikes;
+const breakpointChecker = function () {
+    if (breakpoint.matches === true) {
+        if (swiperBikes !== undefined) {
+            swiperBikes.destroy(true, true);
         }
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-    },
-})
+    }
+    else {
+        return enableSwiper();
+    }
+};
+function enableSwiper() {
+    swiperBikes = new Swiper(".swiper-bikes", {
+        allowTouchMove: true,
+        autoplay: {
+            delay: 2500,
+        },
+        pagination: {
+            el: '.bikes__points',
+            type: 'bullets',
+            clickable: true,
+        },
+    });
+
+}
+breakpoint.addEventListener("change", breakpointChecker);
+breakpointChecker();
 const buttonBurger = document.querySelector(".header__burger");
 const popup = document.querySelector(".popup");
 const popupClose = popup.querySelector(".popup__button_el_close");
@@ -57,13 +69,6 @@ const popupLinks = popup.querySelectorAll(".popup__link");
 
 const road = document.querySelector(".road");
 const roadTemplate = road.querySelector(".road__template");
-const roadButtonNext = road.querySelector(".road__button_type_next");
-const roadButtonBack = road.querySelector(".road__button_type_back");
-
-const cloneRoad = roadTemplate.content.cloneNode(true);
-let roadTitle = cloneRoad.querySelector(".page__title_place_road");
-let roadText = cloneRoad.querySelector(".main-content__text_place_road");
-let roadPictures = cloneRoad.querySelectorAll(".road__picture");
 
 const bikesCards = document.querySelector(".bikes__cards");
 const bikesTemplate = bikesCards.querySelector(".bikes__template");
@@ -86,11 +91,6 @@ const footerButton = footer.querySelector(".footer__button");
 const bikesPlace = document.querySelector("#bikes-place");
 
 
-const bikesPoints = document.querySelector(".bikes__points");
-const pointsTemplate = bikesPoints.querySelector(".bikes__template-points");
-
-const acitveBike = document.querySelector(".bikes__item_active");
-
 
 const arrayRoads = [["Шоссе",
     "На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.",
@@ -110,17 +110,7 @@ const ttBikes = [["Specialized S-Works Shiv", "https://www.sigmasports.com/item/
 ["BMC Timemachine 01 ONE", "https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835", BMC_Timemachine_01],
 ["Cervelo P-Series", "https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q", Cervelo_P_Series]]
 
-// function removePoints() {
-//     const points = bikesPoints.querySelectorAll(".bikes__point");
-//     points.forEach(point => point.remove())
-// }
-// function appearPoints(count) {
-//     for (let i = 0; i < count; i++) {
-//         const clonePoints = pointsTemplate.content.cloneNode(true);
-//         const point = clonePoints.querySelector(".bikes__point");
-//         bikesPoints.append(point);
-//     }
-// }
+
 
 let index = 0;
 while (index < arrayRoads.length) {
@@ -140,18 +130,6 @@ while (index < arrayRoads.length) {
     index++;
 }
 
-// function slider(cards, classVisible) {
-//     let i = 0;
-//     setInterval(function () {
-//         cards[i].classList.remove(classVisible);
-
-//         if (i === cards.length - 1) {
-//             i = -1;
-//         }
-//         cards[i + 1].classList.add(classVisible);
-//         i++;
-//     }, 2000)
-// }
 
 function toggleBikes() {
     let acitveBike;
@@ -184,7 +162,9 @@ function toggleBikes() {
         bikesPicture.src = el[2];
         bikesPicture.alt = el[0];
         bikesName.textContent = el[0];
-        swiperBikes.addSlide(index, cloneBikes); 
+
+        bikesCards.append(cloneBikes);
+
     })
 }
 toggleBikes();
