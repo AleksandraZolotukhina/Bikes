@@ -18,9 +18,11 @@
                 <a class="header__main-link popup__link name" href="#workout">Тренировки</a>
             </nav>
             <div class="page__switcher page__switcher_place_header switch">
-                <img class="switch__picture switch__picture_type_sun" src="<%=require('./../images/sun_light.svg')%>" alt="Светлая тема">
+                <img class="switch__picture switch__picture_type_sun" src="<%=require('./../images/sun_light.svg')%>"
+                    alt="Светлая тема">
                 <input class="switch__checkbox" type="checkbox">
-                <img class="switch__picture switch__picture_type_moon" src="<%=require('./../images/moon_light.svg')%>" alt="Темная тема">
+                <img class="switch__picture switch__picture_type_moon" src="<%=require('./../images/moon_light.svg')%>"
+                    alt="Темная тема">
             </div>
         </div>
         <nav class="header__main-nav">
@@ -57,19 +59,23 @@
                 </div>
             </blockquote>
         </section>
-        <section class="main-content__road road" id="coverings">
-            <template class="road__template">
-                <h2 class="page__title page__title_place_road title"></h2>
-                <p class="main-content__text main-content__text_place_road text"></p>
-                <div class="road__pictures">
-                    <div class="road__picture-content road__picture-content_mark">
-                        <img class="road__picture">
+        <section class="swiper main-content__road road" id="coverings">
+            <div class="swiper-wrapper">
+                <template class="road__template">
+                    <div class="swiper-slide road__slide">
+                        <h2 class="page__title page__title_place_road title"></h2>
+                        <p class="main-content__text main-content__text_place_road text"></p>
+                        <div class="road__pictures">
+                            <div class="road__picture-content road__picture-content_mark">
+                                <img class="road__picture">
+                            </div>
+                            <div class="road__picture-content">
+                                <img class="road__picture">
+                            </div>
+                        </div>
                     </div>
-                    <div class="road__picture-content">
-                        <img class="road__picture">
-                    </div>
-                </div>
-            </template>
+                </template>
+            </div>
             <div class="road__buttons">
                 <button class="road__button road__button_type_back arrow"></button>
                 <button class="road__button road__button_type_next arrow"></button>
@@ -89,21 +95,23 @@
                     <option class="bikes__element text" value="tt">TT</option>
                 </select>
             </div>
-            <ul class="bikes__cards">
-                <template class="bikes__template">
-                    <li class="bikes__card">
-                        <a class="bikes__link">
-                            <img class="bikes__picture">
-                        </a>
-                        <p class="bikes__name name"></p>
-                    </li>
-                </template>
-            </ul>
-            <ul class="bikes__points">
-                <template class="bikes__template-points">
-                    <li class="bikes__point"></li>
-                </template>
-            </ul>
+            <div class="swiper swiper-bikes">
+                <ul class="bikes__cards swiper-wrapper">
+                    <template class="bikes__template">
+                        <li class="bikes__card swiper-slide">
+                            <a class="bikes__link">
+                                <img class="bikes__picture">
+                            </a>
+                            <p class="bikes__name name"></p>
+                        </li>
+                    </template>
+                </ul>
+                <div class="bikes__points">
+                    <!-- <template class="bikes__template-points">
+                        <li class="bikes__point"></li>
+                    </template> -->
+                </div>
+            </div>
         </section>
         <section class="main-content__workout workout" id="workout">
             <h2 class="page__title page__title_place_workout title">Тренировки</h2>
@@ -129,9 +137,11 @@
         <div class="footer__container">
             <p class="footer__copyright copyright">© Road Club 2021</p>
             <div class="page__switcher page__switcher_place_footer switch">
-                <img class="switch__picture switch__picture_type_sun" src="<%=require('./../images/sun_light.svg')%>" alt="Светлая тема">
+                <img class="switch__picture switch__picture_type_sun" src="<%=require('./../images/sun_light.svg')%>"
+                    alt="Светлая тема">
                 <input class="switch__checkbox" type="checkbox">
-                <img class="switch__picture switch__picture_type_moon" src="<%=require('./../images/moon_light.svg')%>" alt="Темная тема">
+                <img class="switch__picture switch__picture_type_moon" src="<%=require('./../images/moon_light.svg')%>"
+                    alt="Темная тема">
             </div>
             <img class="footer__logo" src="<%=require('./../images/logo.svg')%>" alt="Логотип">
         </div>
