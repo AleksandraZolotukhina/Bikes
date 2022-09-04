@@ -11,7 +11,6 @@
  [Ссылка на макет в Figma](https://www.figma.com/file/G3UWFlQmNtNs67751YiDH2/Month-of-Landings?node-id=2%3A556)
 
 - Какие технологии используются в проекте
-    - БЭМ методология и организация файловой структуры <em>Flat</em>
     - Для быстроты загрузки сайта, изображения были оптимизорованы
     - Для разработки интерфейса для разных устройств используются <em>медиа-запросы</em>
     - Темная тема
@@ -19,4 +18,4 @@
 
 - GitHub Pages
 
-[Ссылка GitHub Pages](https://alexandrazolotykhina.github.io/Bikes/index.html)
+[Ссылка GitHub Pages](https://alexandrazolotukhina.github.io/Bikes/index.html)

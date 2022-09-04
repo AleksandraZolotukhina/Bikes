@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Шоссе, ТТ и Грэвел</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./pages/index.css" />
 </head>
 
 <body class="page">
@@ -18,10 +19,10 @@
                 <a class="header__main-link popup__link name" href="#workout">Тренировки</a>
             </nav>
             <div class="page__switcher page__switcher_place_header switch">
-                <img class="switch__picture switch__picture_type_sun" src="<%=require('./../images/sun_light.svg')%>"
+                <img class="switch__picture switch__picture_type_sun" src="./../images/sun_light.svg"
                     alt="Светлая тема">
                 <input class="switch__checkbox" type="checkbox">
-                <img class="switch__picture switch__picture_type_moon" src="<%=require('./../images/moon_light.svg')%>"
+                <img class="switch__picture switch__picture_type_moon" src="./../images/moon_light.svg"
                     alt="Темная тема">
             </div>
         </div>
@@ -41,15 +42,15 @@
                 маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
             <button class="header__button">Подробнее</button>
             <p class="header__text name">Cannondale Systemsix</p>
-            <img class="header__picture" src="<%=require('./../images/Manuel_will.png')%>"
+            <img class="header__picture" src="./../images/Manuel_will.png"
                 alt="Зеленый густой лес, по середине которого едет велосипедист по асфальтированной дороге">
-            <img class="header__bike" src="<%=require('./../images/Cannondale_Systemsix_Himod.png')%>"
+            <img class="header__bike" src="./../images/Cannondale_Systemsix_Himod.png"
                 alt="Велосипед Cannondale Systemsix Himod">
         </div>
     </header>
     <main class="page__main-content main-content">
         <section class="main-content__quote quote">
-            <img class="quote__picture" src="<%=require('./../images/Lubo_minar.png')%>"
+            <img class="quote__picture" src="./../images/Lubo_minar.png"
                 alt="Велосипедист едет по дороге среди большого зеленого холма и зарослей">
             <blockquote class="quote__text-container">
                 <h2 class="quote__title title">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</h2>
@@ -124,7 +125,7 @@
                 <li class="workout__application"><a class="workout__application-link name"
                         href="https://www.komoot.com">Komoot</a></li>
             </ul>
-            <img class="workout__picture" src="<%=require('./../images/Place_training.png')%>"
+            <img class="workout__picture" src="./../images/Place_training.png"
                 alt="Асфальтированная дорога среди деревьев">
         </section>
     </main>
@@ -137,17 +138,18 @@
         <div class="footer__container">
             <p class="footer__copyright copyright">© Road Club 2021</p>
             <div class="page__switcher page__switcher_place_footer switch">
-                <img class="switch__picture switch__picture_type_sun" src="<%=require('./../images/sun_light.svg')%>"
+                <img class="switch__picture switch__picture_type_sun" src="./../images/sun_light.svg"
                     alt="Светлая тема">
                 <input class="switch__checkbox" type="checkbox">
-                <img class="switch__picture switch__picture_type_moon" src="<%=require('./../images/moon_light.svg')%>"
+                <img class="switch__picture switch__picture_type_moon" src="./../images/moon_light.svg"
                     alt="Темная тема">
             </div>
-            <img class="footer__logo" src="<%=require('./../images/logo.svg')%>" alt="Логотип">
+            <img class="footer__logo" src="./../images/logo.svg" alt="Логотип">
         </div>
     </footer>
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>

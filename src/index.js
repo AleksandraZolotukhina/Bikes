@@ -1,18 +1,18 @@
-import './pages/index.css';
 
-import highway from "./../images/Highway.png";
-import gravel from "./../images/Gravel.png";
-import tt from "./../images/TT.png";
 
-import Cervelo_Caledonia_5 from "./../images/Cervelo_Caledonia_5.png";
-import Cannondale_Systemsix_Himod from "./../images/Cannondale_Systemsix_Himod.png";
-import Trek_Domane_SL_7 from "./../images/Cervelo_Aspero_GRX_810.png";
-import Cervelo_Aspero_GRX_810 from "./../images/Cervelo_Aspero_GRX_810.png";
-import Specialized_S_Works_Diverge from "./../images/Specialized_S-Works_Diverge.png";
-import Cannondale_Topstone_Lefty_3 from "./../images/Cannondale_Topstone_Lefty_3.png";
-import Specialized_S_Works_Shiv from "./../images/Specialized_S-Works_Shiv.png"
-import BMC_Timemachine_01 from "./../images/BMC_Timemachine_01 ONE.png";
-import Cervelo_P_Series from "./../images/Cervelo_P-Series.png";
+const highway = "./../images/Highway.png";
+const gravel = "./../images/Gravel.png";
+const tt = "./../images/TT.png";
+
+const Cervelo_Caledonia_5 = "./../images/Cervelo_Caledonia_5.png";
+const Cannondale_Systemsix_Himod = "./../images/Cannondale_Systemsix_Himod.png";
+const Trek_Domane_SL_7 = "./../images/Cervelo_Aspero_GRX_810.png";
+const Cervelo_Aspero_GRX_810 = "./../images/Cervelo_Aspero_GRX_810.png";
+const Specialized_S_Works_Diverge = "./../images/Specialized_S-Works_Diverge.png";
+const Cannondale_Topstone_Lefty_3 = "./../images/Cannondale_Topstone_Lefty_3.png";
+const Specialized_S_Works_Shiv = "./../images/Specialized_S-Works_Shiv.png"
+const BMC_Timemachine_01 = "./../images/BMC_Timemachine_01 ONE.png";
+const Cervelo_P_Series = "./../images/Cervelo_P-Series.png";
 
 const swiper = new Swiper('.road', {
     initialSlide: 0,
