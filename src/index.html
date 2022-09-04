@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шоссе, ТТ и Грэвел</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./pages/index.css" />
+</head>
+
+<body class="page">
+    <header class="page__header header">
+        <div class="popup">
+            <button class="popup__button popup__button_el_close" type="button"></button>
+            <nav class="header__main-nav popup__links">
+                <a class="header__main-link popup__link name" href="#coverings">Покрытия и градиенты</a>
+                <a class="header__main-link popup__link name" href="#bike">Велосипеды</a>
+                <a class="header__main-link popup__link name" href="#workout">Тренировки</a>
+            </nav>
+            <div class="page__switcher page__switcher_place_header switch">
+                <img class="switch__picture switch__picture_type_sun" src="./../images/sun_light.svg"
+                    alt="Светлая тема">
+                <input class="switch__checkbox" type="checkbox">
+                <img class="switch__picture switch__picture_type_moon" src="./../images/moon_light.svg"
+                    alt="Темная тема">
+            </div>
+        </div>
+        <nav class="header__main-nav">
+            <a class="header__main-link name" href="#coverings">Покрытия и градиенты</a>
+            <a class="header__main-link name" href="#bike">Велосипеды</a>
+            <a class="header__main-link name" href="#workout">Тренировки</a>
+        </nav>
+        <div class="header__burger">
+            <span class="header__line"></span>
+            <span class="header__line"></span>
+            <span class="header__line"></span>
+        </div>
+        <div class="header__content">
+            <h1 class="page__title page__title_place_header title">Шоссе, ТТ и Грэвел</h1>
+            <p class="header__subtitle text">Триатлонные старты, горные серпантины или грейвел заезды по живописным
+                маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
+            <button class="header__button">Подробнее</button>
+            <p class="header__text name">Cannondale Systemsix</p>
+            <img class="header__picture" src="./../images/Manuel_will.png"
+                alt="Зеленый густой лес, по середине которого едет велосипедист по асфальтированной дороге">
+            <img class="header__bike" src="./../images/Cannondale_Systemsix_Himod.png"
+                alt="Велосипед Cannondale Systemsix Himod">
+        </div>
+    </header>
+    <main class="page__main-content main-content">
+        <section class="main-content__quote quote">
+            <img class="quote__picture" src="./../images/Lubo_minar.png"
+                alt="Велосипедист едет по дороге среди большого зеленого холма и зарослей">
+            <blockquote class="quote__text-container">
+                <h2 class="quote__title title">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</h2>
+                <div class="quote__text">
+                    <cite class="quote__author name">Эдди Меркс</cite>
+                    <p class="quote__work text">Велогонщик</p>
+                </div>
+            </blockquote>
+        </section>
+        <section class="swiper main-content__road road" id="coverings">
+            <div class="swiper-wrapper">
+                <template class="road__template">
+                    <div class="swiper-slide road__slide">
+                        <h2 class="page__title page__title_place_road title"></h2>
+                        <p class="main-content__text main-content__text_place_road text"></p>
+                        <div class="road__pictures">
+                            <div class="road__picture-content road__picture-content_mark">
+                                <img class="road__picture">
+                            </div>
+                            <div class="road__picture-content">
+                                <img class="road__picture">
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div class="road__buttons">
+                <button class="road__button road__button_type_back arrow"></button>
+                <button class="road__button road__button_type_next arrow"></button>
+            </div>
+        </section>
+        <section class="main-content__bikes bikes" id="bike">
+            <div class="bikes__header">
+                <h2 class="page__title page__title_place_bikes title">Велосипеды</h2>
+                <ul class="bikes__lists">
+                    <li class="bikes__item bikes__item_active text">Шоссе</li>
+                    <li class="bikes__item text">Грэвел</li>
+                    <li class="bikes__item text">TT</li>
+                </ul>
+                <select class="bikes__place" name="bikes-place" id="bikes-place">
+                    <option class="bikes__element text" value="highway">Шоссе</option>
+                    <option class="bikes__element text" value="gravel">Грэвел</option>
+                    <option class="bikes__element text" value="tt">TT</option>
+                </select>
+            </div>
+            <div class="swiper swiper-bikes">
+                <ul class="bikes__cards swiper-wrapper">
+                    <template class="bikes__template">
+                        <li class="bikes__card swiper-slide">
+                            <a class="bikes__link">
+                                <img class="bikes__picture">
+                            </a>
+                            <p class="bikes__name name"></p>
+                        </li>
+                    </template>
+                </ul>
+                <div class="bikes__points">
+                    <!-- <template class="bikes__template-points">
+                        <li class="bikes__point"></li>
+                    </template> -->
+                </div>
+            </div>
+        </section>
+        <section class="main-content__workout workout" id="workout">
+            <h2 class="page__title page__title_place_workout title">Тренировки</h2>
+            <p class="main-content__text text">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot,
+                а записать эти тренировки поможет приложение Strava, а также это приложение позволит построить
+                тренировочный план.</p>
+            <ul class="workout__applications">
+                <li class="workout__application"><a class="workout__application-link name"
+                        href="https://www.strava.com">Strava</a></li>
+                <li class="workout__application"><a class="workout__application-link name"
+                        href="https://www.komoot.com">Komoot</a></li>
+            </ul>
+            <img class="workout__picture" src="./../images/Place_training.png"
+                alt="Асфальтированная дорога среди деревьев">
+        </section>
+    </main>
+    <footer class="page__footer footer">
+        <h3 class="footer__title title">Подпишитесь на рассылку —</h3>
+        <div class="footer__email-container email">
+            <input class="footer__email email" type="email" placeholder="Ваш e-mail">
+            <button class="footer__button button-email button-email_dark_theme">ok</button>
+        </div>
+        <div class="footer__container">
+            <p class="footer__copyright copyright">© Road Club 2021</p>
+            <div class="page__switcher page__switcher_place_footer switch">
+                <img class="switch__picture switch__picture_type_sun" src="./../images/sun_light.svg"
+                    alt="Светлая тема">
+                <input class="switch__checkbox" type="checkbox">
+                <img class="switch__picture switch__picture_type_moon" src="./../images/moon_light.svg"
+                    alt="Темная тема">
+            </div>
+            <img class="footer__logo" src="./../images/logo.svg" alt="Логотип">
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

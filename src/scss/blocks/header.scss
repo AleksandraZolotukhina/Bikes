@@ -1,0 +1,250 @@
+.header{
+    &__main-nav{
+        max-width: $width-large;
+        margin: 0 auto;
+        padding:28px 0;
+
+        display:flex;
+        justify-content: flex-end;
+
+        @include fonts(500,14px,18px,0);
+        
+        @media screen and (max-width:$width-media-middle){
+            max-width: $width-small;
+        }
+        @media screen and (max-width:$width-media-small){
+            display: none;
+        }
+    }
+    &__main-link{
+        margin-right: 32px;
+        text-decoration: none;
+        color:#151515;
+        transition: opacity 0.4s linear;
+    }
+    &__main-link:last-child{
+        margin-right: 0;
+    }
+    &__main-link:hover{
+        opacity: 0.75;
+        cursor: pointer;
+    }
+    &__burger{
+        display: none;
+        cursor: pointer;
+
+        margin-top: 25px;
+        margin-right: 18px;
+
+        transition: opacity 0.4s linear;
+        &:hover{
+            opacity: 0.7;
+        }
+        @media screen and (max-width:$width-media-small){
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+    &__line{
+        width: 20px;
+        border: 1px solid $primary-font-color;
+        margin-bottom:6px;
+
+        &:last-of-type{
+            margin-bottom:0;
+        }
+    }
+    &__content{
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: minmax(200px,510px) 200px minmax(300px,610px);
+        grid-template-rows: repeat(4,auto);
+
+        padding-top: 20px;
+        margin-left: $m-left-large;
+
+        @media screen and (max-width:$width-media-large){
+            grid-template-columns: minmax(200px,510px) 150px minmax(300px,610px);
+        }
+        @media screen and (max-width:$width-media-middle){
+            max-width: $width-small;
+            margin: 0 auto;
+
+            grid-template-columns: minmax(200px,510px) 70px minmax(300px,610px);
+        }
+        @media screen and (max-width:780px){
+            grid-template-columns: minmax(200px,510px) 20px minmax(300px,610px);
+        }
+        @media screen and (max-width:$width-media-small){
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(5,auto);
+            row-gap: 40px;
+
+            margin-top: 51px;
+        }
+
+    }
+    &__subtitle{
+        max-width: 460px;
+        grid-column: 1/2;
+        margin:0;
+        margin-bottom:29px;
+        color: $accent-font-color;
+        opacity: 0.7;
+        @include fonts(400,18px,28px,0);
+
+        @media screen and (max-width:$width-media-large){
+            max-width: 380px;
+        }
+        @media screen and (max-width:$width-media-middle){
+            @include fonts(0,16px,27px,0);
+        }
+        @media screen and (max-width:780px){
+            @include fonts(0,14px,23px,0);
+        }
+        @media screen and (max-width:$width-media-small){
+            max-width: 100%;
+
+            margin: 0;
+            @include fonts(0,12px,18px,0);
+        }
+    }
+    &__picture{
+        grid-column: 3/4;
+        grid-row:1/6;
+
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+
+        @media screen and (max-width:$width-media-small){
+            grid-column: 1;
+            grid-row:2/4;
+
+            margin-left: 30px;
+            width: calc(100% - 30px);
+        }
+
+    }
+    &__button{
+        grid-column: 1/2;
+        @include fonts(600,13px,19px,1px);
+        margin-bottom: 136px;
+        width: 180px;
+        height: 50px;
+        cursor: pointer;
+
+        color: #FFFFFF;
+        border: 0;
+        border-radius: 4px;
+        padding: 0;
+        
+        background-image: linear-gradient(to left, #24B47E 50%,  #319E75 50%);
+        background-size: 300% 100%;
+        background-position: 100%;
+        transition: background-position 2s linear;
+
+        &:hover{
+            background-position: 0%;
+        }
+
+        @media screen and (max-width:$width-media-middle){
+            margin-bottom: 80px;
+        }
+        @media screen and (max-width:$width-media-small){
+            margin: 0;
+            width: 100%;
+            height: 46px;
+        }
+
+    }
+    &__text{
+        position: relative;
+        grid-column: 1/2;
+        max-width: 356px;
+        margin:0;
+        @include fonts(400,18px,18px,0);
+
+        &::after{
+            position: absolute;
+            top: 21%;
+            left: 63%;
+            content: "";
+            display: block;
+
+            width: 132px;
+            height: 2px;
+
+            background-color: #D7D4D4;
+
+            @media screen and (max-width:$width-media-large){
+                top:50%;
+                left: 54%;
+
+                width: 110px;
+            }
+            @media screen and (max-width:1020px){
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:$width-media-large){
+            @include fonts(0,16px,0,0);
+        }
+        @media screen and (max-width:$width-media-small){
+            display: none;
+        }
+    }
+    &__bike{
+        position: sticky;
+        top:347px;
+
+        grid-column: 2/4;
+        grid-row: 3/6;
+
+        width: 340px;
+        height: 260px;
+
+        object-fit: cover;
+
+        margin-bottom: 79px;
+        padding: 20px 50px;
+
+        border-radius: 20px;
+        box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.21);
+        background-color: $primary-back-color;
+
+        @media screen and (max-width:$width-media-large){
+            width: 300px;
+            height: 228px;
+
+            padding: 20px 30px;
+        }
+        @media screen and (max-width:$width-media-middle){
+            width: 250px;
+            height: 190px;
+
+            margin-bottom: 50px;
+            padding: 20px;
+        }
+        @media screen and (max-width:780px){
+            width: 200px;
+            height: 152px;
+        }
+        @media screen and (max-width:$width-media-small){
+            position: static;
+
+            grid-column: 1;
+            grid-row:3/4;
+            
+            width: 180.82px;
+            height: 138.67px;
+
+            margin-bottom: 37px;
+            padding: 10.67px 26.59px;
+
+            box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+        }
+    }
+}

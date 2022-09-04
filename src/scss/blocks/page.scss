@@ -1,0 +1,99 @@
+.page{
+    max-width: 1440px;
+    margin: 0 auto;
+
+    background-color: $primary-back-color;
+    color: $primary-font-color;
+
+    font-family: $font-family;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    &_theme_dark{
+       background-color: $primary-back-color-dark;
+    }
+    &__header{
+        position: relative;
+    }
+    &__switcher{
+        display: flex;
+        align-items: center;
+
+        &_place{
+            &_header{
+                justify-content: center;
+                margin-bottom: 36px;
+            }
+            &_footer{
+                @media screen and (max-width:$width-media-small){
+                    display: none;
+                }
+            }
+        }
+    }
+    &__footer{
+        padding: 82px 120px;
+        padding-bottom: 60px;
+
+        @media screen and (max-width:$width-media-large){
+            padding: 50px;
+        } 
+        @media screen and (max-width:$width-media-small){
+            padding: 25px 18px;
+            padding-top: 56px;
+        }
+    }
+    &__title{
+        @include fonts(700,55px,60px,-0.5px);
+        margin: 0;
+        margin-bottom: 50px;
+
+        @media screen and (max-width:$width-media-large){
+            @include fonts(0,45px,50px,0);
+        }
+        @media screen and (max-width:$width-media-middle){
+            margin-bottom: 20px;
+
+            @include fonts(0,37px,42px,0);
+        }
+        @media screen and (max-width:$width-media-small){
+            margin: 0;
+
+            @include fonts(0,32px,40px,-0.5px);
+        }
+        &_place{
+            &_header{
+
+                grid-column: 1/2;
+                margin-top:63px;
+                margin-bottom: 22px;
+                max-width:330px;
+
+                @media screen and (max-width:$width-media-small){
+                    margin: 0;
+                }
+            }
+            &_bikes{
+                margin-bottom: 0;
+            }
+            &_workout{
+                @media screen and (max-width:$width-media-large){
+                    margin-bottom: 30px;
+                }
+                @media screen and (max-width:780px){
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+    }
+    &__main-content{
+        margin: 120px 0;
+
+        @media screen and (max-width:$width-media-large){
+            margin-top: 80px;
+            margin-bottom: 60px;
+        }
+    }  
+}

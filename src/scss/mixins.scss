@@ -1,0 +1,16 @@
+@mixin fonts($weight, $size, $l-height,$space) {
+    font-style: normal;
+    @if $weight!=0{
+        font-weight: $weight;
+    }
+    @if $size!=0{
+        font-size: $size;;
+    }
+    @if $l-height!=0{
+        line-height: $l-height;
+    }
+    @if $space!=0{
+        letter-spacing:$space;
+    }
+}
+      

@@ -1,0 +1,42 @@
+.switch__checkbox {
+  width: 44px;
+  height: 24px;
+  position: relative;
+  margin: 0;
+  margin-right: 22px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 9999px;
+}
+.switch__checkbox:checked {
+  background-color: #545454;
+}
+.switch__checkbox::before {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  content: "";
+  background-color: #24B47E;
+  box-shadow: 0px 0px 0px #FFFFFF;
+  border-radius: 9999px;
+}
+.switch__checkbox:checked::before {
+  left: auto;
+  right: 2px;
+}
+.switch__picture_type_sun {
+  width: 28px;
+  height: 28px;
+  margin-right: 22px;
+}
+.switch__picture_type_moon {
+  width: 19.35px;
+  height: 19.35px;
+}
+.switch__picture_theme_dark {
+  filter: invert(0.5);
+}/*# sourceMappingURL=switch.css.map */

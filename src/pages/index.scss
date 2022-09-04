@@ -1,0 +1,27 @@
+@import "./../vendor/normalize.css";
+@import "./../vendor/fonts.css";
+
+@import "./../scss/variables.scss";
+@import "./../scss/mixins.scss";
+
+@import "./../scss/blocks/page.scss";
+@import "./../scss/blocks/switch.scss";
+@import "./../scss/blocks/header.scss";
+@import "./../scss/blocks/popup.scss";
+@import "./../scss/blocks/main-content.scss";
+@import "./../scss/blocks/quote.scss";
+@import "./../scss/blocks/road.scss";
+@import "./../scss/blocks/bikes.scss";
+@import "./../scss/blocks/workout.scss";
+@import "./../scss/blocks/footer.scss";
+@import "./../scss/blocks/button.scss";
+
+@import "./../scss/blocks/name.scss";
+@import "./../scss/blocks/title.scss";
+@import "./../scss/blocks/text.scss";
+@import "./../scss/blocks/email.scss";
+@import "./../scss/blocks/arrow.scss";
+@import "./../scss/blocks/copyright.scss";
+@import "./../scss/blocks/button-email.scss";
+
+@import "./../scss/blocks/swiper-pagination-bullet.scss";

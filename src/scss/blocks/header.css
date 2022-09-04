@@ -1,0 +1,12 @@
+.header__main-nav {
+  padding: 28px 0;
+  display: flex;
+  justify-content: flex-end;
+  @i;
+}
+.header__main-link {
+  margin-right: 32px;
+}
+.header__main-link:last-child {
+  margin-right: 0;
+}/*# sourceMappingURL=header.css.map */

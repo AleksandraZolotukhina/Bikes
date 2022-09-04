@@ -1,0 +1,56 @@
+.workout{
+    display: grid;
+    grid-template-columns: minmax(200px, 460px) minmax(500px,1fr);
+    grid-template-rows: repeat(2,auto) 1fr;
+    column-gap: 160px;
+
+    @media screen and (max-width:$width-media-large){
+        column-gap: 26px;
+    }
+    @media screen and (max-width:$width-media-middle){
+        grid-template-columns: minmax(200px, 300px) minmax(450px,1fr);
+    }
+    @media screen and (max-width:780px){
+        grid-template-columns: 100%;
+        column-gap: 0;
+        row-gap: 40px;
+    }
+    &__picture{
+        width: 100%;
+        grid-column: 2/3;
+        grid-row: 1/4;
+
+        @media screen and (max-width:780px){
+            grid-column: auto;
+            grid-row: 2/3;
+        }
+    }
+    &__applications{
+        display: flex;
+        align-items: flex-end;
+        
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    &__application{
+        margin-right: 30px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__application-link{
+        text-decoration: none;
+        color: $primary-font-color;
+        
+        @include fonts(600,18px,28px,0);
+
+        transition: opacity 0.4s linear;
+        &:hover{
+            opacity: 0.75;
+        }
+        @media screen and (max-width:$width-media-large){
+            @include fonts(0,15px,0,0);
+        }
+    }
+}

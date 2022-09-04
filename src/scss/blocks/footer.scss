@@ -1,0 +1,111 @@
+.footer{
+    max-width: $width-large;
+    margin: 0 auto;
+
+    background-color: $accent-back-color;
+
+    @media screen and (max-width:$width-media-large){
+        max-width: 100%;
+    } 
+    &_theme_dark{
+        background-color: $accent-back-color-dark;
+    }
+    &__title{
+        max-width: 230px;
+        margin: 0;
+        margin-bottom: 48px;
+        @include fonts(600,24px,32px,0);
+
+        @media screen and (max-width:$width-media-small){
+            margin-bottom: 40px;
+        }
+    }
+    &__email-container{
+        display: flex;
+        justify-content: space-between;
+        width: 360px;
+        height: 50px;
+
+        border: 1px solid rgba(199, 199, 199, 0.5);
+        border-radius: 4px;
+        box-sizing: border-box;
+        padding: 11px 20px;
+
+        background-color: $accent-back-color;
+        color: $accent-font-color;
+
+        @media screen and (max-width:$width-media-small){
+            width: 284px;
+        }
+
+        &:focus{
+            outline-color: #C7C7C7;
+        }
+    }
+    &__button{
+        display: none;
+        
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+
+        color: $primary-font-color;
+        background-color: initial;
+
+        @include fonts(500,13px,28px,0);
+
+        &:disabled{
+            cursor: not-allowed;
+        }
+    }
+    &__email{
+        width: 280px;
+        padding: 0;
+
+        border: none;
+        outline: none;
+
+        background-color: $accent-back-color;
+        color: $accent-font-color;
+        opacity: 0.7;
+
+        @include fonts(500,13px,28px,0);
+
+        @media screen and (max-width:$width-media-small){
+            width: 227px;
+        }
+
+        &:hover{
+            color: $primary-font-color;
+            opacity: 1;
+        }
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-top: 96px;
+
+        @media screen and (max-width:$width-media-small){
+            margin-top: 88px;
+        }
+    }
+    &__copyright{
+        margin: 0;
+
+        @include fonts(600,14px,20px,0);
+        color: #CFCFCF; 
+    }
+    &__logo{
+        display: none;
+
+        width: 35px;
+        height: 35px;
+
+        @media screen and (max-width:$width-media-small){
+            display: block;
+        }
+    }
+}

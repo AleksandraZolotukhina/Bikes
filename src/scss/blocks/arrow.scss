@@ -1,0 +1,8 @@
+.arrow{
+    &_theme_dark {
+        background-color: #434343;
+        &:before{
+            filter: invert(1);
+        }
+    }
+}

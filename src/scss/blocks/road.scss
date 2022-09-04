@@ -1,0 +1,151 @@
+.road{
+
+    &__slide{
+        @media screen and (max-width:$width-media-small){
+            display: grid;
+            row-gap: 40px;      
+        }  
+    }
+    &__pictures{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(284px,1fr));
+        gap: 40px;
+        
+        margin-top: 80px;
+
+        @media screen and (max-width:$width-media-middle){
+            margin-top: 40px;
+        }
+
+        @media screen and (max-width:$width-media-small){
+            grid-column: 1/3;
+            grid-row: 2/3;
+
+            margin: 0;
+        }
+    }
+     &__picture{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__picture-content{
+        @media screen and (max-width:$width-media-small){
+            display: none;
+        }
+        &_mark{
+            position: relative;
+            @media screen and (max-width:$width-media-small){
+                display: block;
+            }
+            &::before{
+                width: 51px;
+                height: 16px;
+
+                content: "";
+                display: inline-block;
+
+                background-image: url("../../images/Vector.svg");
+                background-size: cover;
+                
+                position: absolute;
+                bottom:28px;
+                left: 16px;
+                z-index: 2;
+
+                @media screen and (max-width:$width-media-small){
+                    width: 35px;
+                    height: 12px;
+                }
+            }
+            &::after{
+                content: "";
+                display: inline-block;
+
+                background-image: url("../../images/Rectangle.svg");
+                background-size: cover;
+
+                width: 100px;
+                height: 40px;
+
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                bottom:16px;
+
+                @media screen and (max-width:$width-media-small){
+                    width: 70px;
+                    height: 28px;
+                }
+            }
+        }
+    }
+    &__buttons{
+        margin-top: 50px;
+
+        @media screen and (max-width:$width-media-small){
+            position: absolute;
+            right: 0;
+            top: 40px;
+            z-index: 1;
+
+            margin: 0;
+        }
+    }
+    &__button{
+        width: 50px;
+        height: 50px;
+
+        border-radius: 50px;
+        border: 0;
+        padding: 0;
+        background-color: #EBEBEB;
+
+        transition: opacity 0.4s linear;
+
+        @media screen and (max-width:$width-media-small){
+            width: 24px;
+            height: 24px;
+        }
+        &:hover{
+            cursor: pointer;
+            opacity: 0.6;
+        }
+        &::before{
+            content: "";
+            display: inline-block;
+            background-image: url("../../images/Arrow_next.svg");
+            background-size: 7px 16px;
+            width: 7px;
+            height: 16px;
+
+            @media screen and (max-width:$width-media-small){
+                background-size: 4.5px 10px;
+                width: 4.5px;
+                height: 10px;
+            }
+        }
+        &_type{
+            &_back{ 
+                margin-right: 20px;
+                @media screen and (max-width:$width-media-small){
+                    margin-right: 10px;
+                }
+                &:disabled{
+                    cursor: not-allowed;
+                    opacity: 0.6;
+                }
+                &::before{
+                    background-image: url("../../images/Arrow_back.svg");
+                }
+            }
+            &_next{
+                &:disabled{
+                    cursor: not-allowed;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}

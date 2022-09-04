@@ -1,0 +1,189 @@
+.bikes{
+    & .swiper{
+        
+        @media screen and (min-width:$width-media-small){
+            overflow: visible;
+        }
+    }
+
+    &__place{
+        display: none;
+
+        width: 114px;
+        border: 1px solid #E3E3E3;
+        border-radius: 2px;
+        padding: 8px 12px;
+        -webkit-appearance: none;
+        background: url("../../images/Arrow_down.svg") no-repeat;
+        background-position: 90px;
+        @include fonts(600,11px,14px,0);
+        color:$primary-font-color;
+        background-color: $primary-back-color;
+
+        @media screen and (max-width:$width-media-small){
+            display: block;
+            margin-top: 40px;
+        }
+    }
+    &__header{
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width:$width-media-small){
+            display: block;
+        }
+    }
+    &__lists{
+        display: flex;
+        align-items: flex-end;
+
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        @media screen and (max-width:$width-media-small){
+            display: none;
+        }
+    }
+    &__item{
+        margin-right: 40px;
+
+        @include fonts(400,18px,28px,0);
+
+        cursor: pointer;
+        color: $accent-font-color;
+
+        opacity: 0.7;
+        transition: opacity 0.4s linear;
+        @media screen and (max-width:$width-media-middle){
+            @include fonts(0,16px,28px,0);
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+        &:hover{
+            opacity: 0.6;
+        }
+        &_active{
+            color: $primary-font-color;
+            opacity: 1;
+            &:hover{
+                opacity: 0.75;
+            }
+        }
+    }
+    &__cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+        gap: 30px;
+
+        list-style-type: none;
+        margin: 0;
+        margin-top: 113px;
+        padding: 0;
+
+        @media screen and (max-width:$width-media-large){
+            margin-top: 80px;
+        }
+        @media screen and (max-width:$width-media-middle){
+            margin-top: 40px;
+        }
+        @media screen and (max-width:$width-media-small){
+            display: flex;
+            gap: 0;
+
+            margin-top: 20px;
+        }
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width:$width-media-small){
+            display: block;
+            background-color: #F4F4F4;
+            border-radius: 20px;
+            
+            box-sizing: border-box;
+            padding: 16px 14.95px;
+        }
+
+    }
+    &__link{
+        box-shadow: -20px 60px 220px rgb(0 0 0 / 21%);
+        border-radius: 20px;
+        background-color: $primary-back-color;
+
+        cursor: pointer; 
+        padding: 20px;
+    
+        @media screen and (max-width:$width-media-middle){
+            padding: 15px;
+        }
+        @media screen and (max-width:$width-media-small){
+            box-shadow: none;
+            padding: 0;
+        }
+    }
+    &__picture{
+        width: 100%;
+        object-fit: contain;
+        @media screen and (max-width: $width-media-small) {
+            border-radius: 20px;
+            box-shadow: -8px 6px 21px rgb(0 0 0 / 21%);
+        }
+        
+    }
+    &__name{
+        margin: 0;
+        margin-top: 22px;
+        @include fonts(600,18px,22px,0); 
+
+        @media screen and (max-width:$width-media-large){
+            @include fonts(0,16px,0,0); 
+        }
+        @media screen and (max-width:$width-media-middle){
+            @include fonts(0,14px,18px,0); 
+        }
+        @media screen and (max-width:$width-media-small){
+            margin: 0;
+
+            text-align: center;
+        }
+        &.name_dark-theme{
+            @media screen and (max-width: $width-media-small) {
+                color: $primary-font-color;
+            }
+        }
+    }
+    &__points{
+        display: none;
+
+        margin: 0;
+        margin-top: 20px;
+        padding: 0;
+
+        list-style-type: none;
+
+        @media screen and (max-width:$width-media-small){
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__point{
+        width: 4px;
+        height: 4px;
+
+        background-color: #CACACA;
+        border-radius: 50%;
+
+        margin-right: 5px;
+        &:last-child{
+            margin-right: 0;
+        }
+        &_active{
+            background-color: $primary-font-color;
+        }
+    }
+
+}
