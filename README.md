@@ -18,4 +18,4 @@
 
 - GitHub Pages
 
-[Ссылка GitHub Pages](https://alexandrazolotukhina.github.io/Bikes/index.html)
+[Ссылка GitHub Pages](https://aleksandrazolotukhina.github.io/Bikes)
